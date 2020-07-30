@@ -45,7 +45,7 @@ secret_prologue = """# this is your SECRET name.
 
 secret_epilogue = """
 
-# WARNING! It's vital that you DO NOT edit OR share your secret name
+# WARNING! It's vital that you DO NOT edit OR share your privat name
 # instead, share your public name
 # your public name: """
 
