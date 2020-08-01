@@ -10,12 +10,15 @@ the_loop = asyncio.get_event_loop()
 
 async def main(secr):
     net.init(secr.id, None)
-    host = "localhost"
+    #host = "localhost"
     #host = "scuttle.space"
     port = 8008
-    pubID = secr.id
+    #pubID = secr.id
     #pubID = "@skBzPazHliOXCWLwloGvHYki0wPLOUeJpvW10U7MOJ4=.ed25519~Se9GO9kK+Vt8SYsH5APvrXT12jK3WbS5mNH6GliFQ28="
     
+    host = "eu-west.ssbpeer.net"
+    pubID = "@4TG/WLESyhThgTvmi5W3baX//tbF0HyskFprREqHbyc=.ed25519~rLtaOp1E5eac4kfij9E1avcj8/gk97EgD+RA+8r9HJk="
+
     try:
         api = await net.connect(host, port, pubID, secr.keypair)
     except Exception as e:

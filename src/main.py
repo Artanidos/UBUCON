@@ -19,44 +19,101 @@
 #############################################################################
 
 import sys
-from gui.mainwindow import MainWindow
-from PyQt5.QtWidgets import QApplication, QStyleFactory
-from PyQt5.QtCore import Qt, QCoreApplication, QSettings
-from PyQt5.QtGui import QPalette, QColor, QIcon, QFont
-from PyQt5.QtQml import qmlRegisterType
-#import main_rc
+import os
+import asyncio
+import logic.config
+import logic.net as net
+import threading
+import json
+
+import lib.main_rc
+from PyQt5.QtGui import QGuiApplication
+from PyQt5.QtQml import QQmlApplicationEngine
+from PyQt5.QtCore import QObject, pyqtProperty, pyqtSignal, pyqtSlot
+
+
+the_loop = asyncio.get_event_loop()
+
+async def main(secr):
+    net.init(secr.id, None)
+    #host = "localhost"
+    #host = "scuttle.space"
+    port = 8008
+    #pubID = secr.id
+    #pubID = "@skBzPazHliOXCWLwloGvHYki0wPLOUeJpvW10U7MOJ4=.ed25519~Se9GO9kK+Vt8SYsH5APvrXT12jK3WbS5mNH6GliFQ28="
+    
+    host = "eu-west.ssbpeer.net"
+    pubID = "@4TG/WLESyhThgTvmi5W3baX//tbF0HyskFprREqHbyc=.ed25519~rLtaOp1E5eac4kfij9E1avcj8/gk97EgD+RA+8r9HJk="
+
+    try:
+        api = await net.connect(host, port, pubID, secr.keypair)
+    except Exception as e:
+        print("error")
+        raise e
+    asyncio.ensure_future(api)
+    print("Logged in as:", secr.id)
+    print("Connected to:", host)
+    
+    start = 1
+    async for mstr in net.get_msgs([secr.id, start], 4):
+        print(mstr)
+        print()
+
+
+class Bridge(QObject):
+    textChanged = pyqtSignal()
+
+    def __init__(self, parent=None):
+        QObject.__init__(self, parent)
+        self._root = None
+        self._cwd = os.getcwd()
+
+    def setRoot(self, root):
+        self._root = root
+
+    @pyqtProperty(str, notify=textChanged)
+    def cwd(self):
+        return self._cwd
+
+    @pyqtSlot("QString")
+    def message(self, value):
+        print(value + " from QML")
+        self._root.updateMessage(value + " from Python")
+
+    def queryServer(self):
+        self.x = threading.Thread(target=the_loop.run_forever)
+        asyncio.set_event_loop(the_loop)
+        asyncio.ensure_future(main(secr))
+        self.x.start()
 
 
 if __name__ == "__main__":
-    QCoreApplication.setApplicationName("UBUCON")
-    QCoreApplication.setApplicationVersion("0.0.1")
-    QCoreApplication.setOrganizationName("CrowdWare")
-
-    app = QApplication(sys.argv)
-    app.setStyle(QStyleFactory.create("Fusion"))
-    app.setStyleSheet("QPushButton:hover { color: #45bbe6 }")
-
-    font = QFont("Sans Serif", 10)
-    app.setFont(font)
-
-    p = app.palette()
-    p.setColor(QPalette.Window, QColor(53, 53, 53))
-    p.setColor(QPalette.WindowText, Qt.white)
-    p.setColor(QPalette.Base, QColor(64, 66, 68))
-    p.setColor(QPalette.AlternateBase, QColor(53, 53, 53))
-    p.setColor(QPalette.ToolTipBase, Qt.white)
-    p.setColor(QPalette.ToolTipText, Qt.black)
-    p.setColor(QPalette.Text, Qt.white)
-    p.setColor(QPalette.Button, QColor(53, 53, 53))
-    p.setColor(QPalette.ButtonText, Qt.white)
-    p.setColor(QPalette.BrightText, Qt.red)
-    p.setColor(QPalette.Highlight, QColor("#45bbe6"))
-    p.setColor(QPalette.HighlightedText, Qt.black)
-    p.setColor(QPalette.Disabled, QPalette.Text, Qt.darkGray)
-    p.setColor(QPalette.Disabled, QPalette.ButtonText, Qt.darkGray)
-    p.setColor(QPalette.Link, QColor("#bbb"))
-    app.setPalette(p)
-    app.setWindowIcon(QIcon(":/images/logo.svg"))        
-    win = MainWindow()
-    win.show()
-    sys.exit(app.exec_())
+    fname = os.path.expanduser('~/.ssb/secret')
+    # create a new account, if no one will be found on the platform
+    if not os.path.exists(fname):
+        logic.config.create_new_user_secret(fname)
+    secr = logic.config.SSB_SECRET()
+    
+    sys_argv = sys.argv
+    sys_argv += ['--style', 'material']
+    
+    app = QGuiApplication(sys.argv)
+    
+    view =  "/storage/emulated/0/view.qml"
+    if os.path.exists(view):
+        # we are trying to load the view dynamically from the root of the storage
+        engine = QQmlApplicationEngine(view)
+        if not engine.rootObjects():
+            sys.exit(-1)
+    else:
+        # if the attempt to load the local file fails, we load the fallback
+        engine = QQmlApplicationEngine("src/view.qml")
+        if not engine.rootObjects():
+            sys.exit(-1)
+    
+    bridge = Bridge()
+    engine.rootContext().setContextProperty("bridge", bridge)
+    roots = engine.rootObjects()
+    bridge.setRoot(roots[0])
+    bridge.queryServer()
+    sys.exit(app.exec())
