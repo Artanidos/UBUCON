@@ -34,7 +34,7 @@ from PyQt5.QtCore import QObject, pyqtProperty, pyqtSignal, pyqtSlot
 
 the_loop = asyncio.get_event_loop()
 
-async def main(secr):
+async def main(secr, bridge):
     net.init(secr.id, None)
     #host = "localhost"
     #host = "scuttle.space"
@@ -51,8 +51,9 @@ async def main(secr):
         print("error")
         raise e
     asyncio.ensure_future(api)
-    print("Logged in as:", secr.id)
-    print("Connected to:", host)
+    bridge.message("Logged in as: " + secr.id)
+    #print("Logged in as:", secr.id)
+    #print("Connected to:", host)
     
     start = 1
     async for mstr in net.get_msgs([secr.id, start], 4):
@@ -66,25 +67,25 @@ class Bridge(QObject):
     def __init__(self, parent=None):
         QObject.__init__(self, parent)
         self._root = None
-        self._cwd = os.getcwd()
+        self.x = None
 
     def setRoot(self, root):
         self._root = root
+    
+    def init(self):
+        self._root.init()
+        self._root.message("Init")
 
-    @pyqtProperty(str, notify=textChanged)
-    def cwd(self):
-        return self._cwd
-
-    @pyqtSlot("QString")
-    def message(self, value):
-        print(value + " from QML")
-        self._root.updateMessage(value + " from Python")
-
+    @pyqtSlot()
     def queryServer(self):
         self.x = threading.Thread(target=the_loop.run_forever)
         asyncio.set_event_loop(the_loop)
-        asyncio.ensure_future(main(secr))
+        asyncio.ensure_future(main(secr, self))
         self.x.start()
+
+    def message(self, text):
+        print(text)
+        #self._root.message(text)
 
 
 if __name__ == "__main__":
@@ -98,7 +99,6 @@ if __name__ == "__main__":
     sys_argv += ['--style', 'material']
     
     app = QGuiApplication(sys.argv)
-    
     view =  "/storage/emulated/0/view.qml"
     if os.path.exists(view):
         # we are trying to load the view dynamically from the root of the storage
@@ -115,5 +115,5 @@ if __name__ == "__main__":
     engine.rootContext().setContextProperty("bridge", bridge)
     roots = engine.rootObjects()
     bridge.setRoot(roots[0])
-    bridge.queryServer()
+    bridge.init()
     sys.exit(app.exec())

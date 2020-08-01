@@ -8,7 +8,12 @@ ApplicationWindow
 {
     visible: true
 
-    function updateMessage(text)
+    function init()
+    {
+        bridge.queryServer()
+    }
+
+    function message(text)
     {
         txt.text = text
     }
@@ -18,13 +23,5 @@ ApplicationWindow
         id: txt
         anchors.centerIn: parent
         text: "UBUCON"
-    }
-
-    MouseArea {
-        anchors.fill: parent
-        onClicked: 
-        {
-            bridge.message("click")
-        }
     }
 }
