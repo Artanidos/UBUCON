@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/media/art/data/SourceCode/UBUCON/src/android/build-android-32/ubucon/build/intermediates/res/merged/debug/drawable-mdpi_icon.png.flat",
+        "source": "/media/art/data/SourceCode/UBUCON/src/android/build-android-32/ubucon/res/drawable-mdpi/icon.png"
+    },
+    {
+        "merged": "/media/art/data/SourceCode/UBUCON/src/android/build-android-32/ubucon/build/intermediates/res/merged/debug/drawable-hdpi_icon.png.flat",
+        "source": "/media/art/data/SourceCode/UBUCON/src/android/build-android-32/ubucon/res/drawable-hdpi/icon.png"
+    },
+    {
+        "merged": "/media/art/data/SourceCode/UBUCON/src/android/build-android-32/ubucon/build/intermediates/res/merged/debug/layout_splash.xml.flat",
+        "source": "/media/art/data/qt/5.12.3/android_armv7/src/android/java/res/layout/splash.xml"
+    },
+    {
+        "merged": "/media/art/data/SourceCode/UBUCON/src/android/build-android-32/ubucon/build/intermediates/res/merged/debug/drawable-ldpi_icon.png.flat",
+        "source": "/media/art/data/SourceCode/UBUCON/src/android/build-android-32/ubucon/res/drawable-ldpi/icon.png"
+    }
+]
