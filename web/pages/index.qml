@@ -32,13 +32,13 @@ Content {
                 Text {
                     text: "&lt;h1&gt;
 	&lt;strong&gt;Welcome&lt;/strong&gt; to UBUCON
-	&lt;span class=&quot;subtitle&quot;&gt;WE ARE HAPPY TO SEE YOU HERE&lt;/span&gt;
+	&lt;span class=&quot;subtitle&quot;&gt;UBUCON is the short form of UBUNTU Connection&lt;/span&gt;
 &lt;/h1&gt;
 &lt;p class=&quot;lead&quot;&gt;We have got the following situation with social media today:&lt;/p&gt;
 &lt;div class=&quot;row featured-box-minimal&quot;&gt; 
 	&lt;div class=&quot;col-md-12&quot;&gt;
 		&lt;h4&gt;&lt;i class=&quot;fa fa-users&quot;&gt;&lt;/i&gt; Facebook&lt;/h4&gt;
-		&lt;p&gt; 
+		&lt;p&gt;
 			Facebook is collecting our private information, censors our posts, floods us with ads and we only see the posts of only 25 of our friends.
 		&lt;/p&gt;
 	&lt;/div&gt;
@@ -64,6 +64,16 @@ Content {
 		&lt;h4&gt;&lt;i class=&quot;fa fa-users&quot;&gt;&lt;/i&gt; Telegram&lt;/h4&gt;
 		&lt;p&gt;
 			Do you really trust these guys? Are they open source at all? Who controls them?
+		&lt;/p&gt;
+	&lt;/div&gt;	
+&lt;/div&gt;
+&lt;div class=&quot;row featured-box-minimal&quot;&gt;
+	&lt;div class=&quot;col-md-12&quot;&gt;
+		&lt;h4&gt;&lt;i class=&quot;fa fa-users&quot;&gt;&lt;/i&gt; Human Connections&lt;/h4&gt;
+		&lt;p&gt;
+			As stated by Dennis Hack, Human Connections is an open source platform, where everybody thought, 
+			he would bring it for free.&lt;/br&gt;
+			Unfortunately they are asking for millions to complete their project and it&#x27;s still not out yet.&lt;/br&gt;
 		&lt;/p&gt;
 	&lt;/div&gt;	
 &lt;/div&gt;
@@ -102,7 +112,7 @@ Would you like to see a solution, then keep reading on.
 			&lt;div class=&quot;white-row&quot;&gt;
 				&lt;h3&gt;&lt;strong&gt;UBUCON&lt;/strong&gt;&lt;/h3&gt;
 				&lt;p class=&quot;lead&quot;&gt;
-					THE PRIVATE SOCIAL MEDIA
+					THE PRIVATE SOCIAL MEDIA FROM THE PEOPLE
 				&lt;/p&gt;
 			&lt;/div&gt;
 		&lt;/div&gt;
@@ -162,6 +172,31 @@ Would you like to see a solution, then keep reading on.
 			&lt;/section&gt;
 			&lt;!-- /FEATURED BOXES 3 --&gt;"
                     adminlabel: "Features"
+                }
+            }
+        }
+
+        Row {
+
+            Column {
+                span: 12
+
+                Text {
+                    text: "&lt;p class=&quot;lead&quot;&gt;
+	How can we archieve our goals with no or only a little money?
+&lt;/p&gt;
+
+&lt;p&gt;
+	Do you know what UBUNTU is all about?&lt;/br&gt;
+	UBUNTU means, &lt;strong&gt;I am, because we are&lt;/strong&gt;. We are helping each other, without asking for money or something in exchange.&lt;/br&gt;
+	As Meli asked me in August 2020, if I would start this project for the UBUNTU movement, then I immediatly said, YES.&lt;/br&gt;
+	I was just happy to get this project. All my life I was steering into this direction. I felt the call years before.
+	It is my biggest project so far, even after being a software developer since 30 years now.&lt;/br&gt;
+	I am not good in anything in particular, but my skills are cross plattform, user interface design and user centered design
+	that is what is needed right now. &lt;/br&gt;&lt;/br&gt;
+	Maybe later we need to crowdfund some budget, because we might need hardware or we might have to pay some developer,
+	but right now we just need time.
+&lt;/p&gt;"
                 }
             }
         }

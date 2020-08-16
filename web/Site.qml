@@ -4,7 +4,7 @@ Site {
    title: 'UBUCON'
    theme: 'atropos'
    description: 'UBUNTU Connection'
-   copyright: '&amp;copy; 2020 Olaf Japp. All Rights Reserved.'
+   copyright: '(C) 2020 Olaf Japp. All Rights Reserved.'
    keywords: 'ubuntu '
    author: 'Art'
    logo: 'logo.png'
