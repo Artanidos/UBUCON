@@ -13,7 +13,6 @@ Menus {
             url: '#features'
             icon: ''
         }
-        
         Menuitem {
             title: 'Team'
             url: '#team'
@@ -25,7 +24,7 @@ Menus {
             icon: ''
         }
         Menuitem {
-            title: 'Kontakt'
+            title: 'Contact'
             url: '#contact'
             icon: ''
         }

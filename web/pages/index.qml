@@ -183,7 +183,7 @@ Would you like to see a solution, then keep reading on.
 
                 Text {
                     text: "&lt;p class=&quot;lead&quot;&gt;
-	How can we archieve our goals with no or only a little money?
+	How can we archieve our goals with no or only a little budget?
 &lt;/p&gt;
 
 &lt;p&gt;
@@ -197,6 +197,35 @@ Would you like to see a solution, then keep reading on.
 	Maybe later we need to crowdfund some budget, because we might need hardware or we might have to pay some developer,
 	but right now we just need time.
 &lt;/p&gt;"
+                }
+            }
+        }
+    }
+
+    Section {
+        cssclass: "parallax margin-top80"
+        style: "background-image: url('assets/images/natur2.jpg');"
+        attributes: "data-stellar-background-ratio='0.7'"
+
+        Row {
+
+            Column {
+                span: 12
+
+                Text {
+                    text: "&lt;div class=&quot;container&quot;&gt;
+	&lt;div class=&quot;row animation_fade_in&quot;&gt;
+		&lt;div class=&quot;col-md-6&quot;&gt;
+			&lt;div class=&quot;white-row&quot;&gt;
+				&lt;h3&gt;&lt;strong&gt;UBUCON&lt;/strong&gt;&lt;/h3&gt;
+				&lt;p class=&quot;lead&quot;&gt;
+					DECENTRAL, ANONYMOUS, NO ADS, NO CENSORSHIP 
+				&lt;/p&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;"
+                    adminlabel: "Parallax"
                 }
             }
         }
