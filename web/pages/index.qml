@@ -232,6 +232,65 @@ Would you like to see a solution, then keep reading on.
     }
 
     Section {
+
+        Row {
+
+            Column {
+                span: 12
+
+                Text {
+                    text: "&lt;h2 class=&quot;margin-top80&quot;&gt;&lt;strong&gt;Ideas&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p class=&quot;lead&quot;&gt;
+	Here are some ideas what we can implement with UBUCON as plugin.
+&lt;/p&gt;
+&lt;div class=&quot;row featured-box-minimal&quot;&gt; 
+	&lt;div class=&quot;col-md-12&quot;&gt;
+		&lt;h4&gt;&lt;i class=&quot;fa fa-users&quot;&gt;&lt;/i&gt; Housing&lt;/h4&gt;
+		&lt;p&gt;
+			There are many houses abandoned on the whole planet while we have got many homeless people.
+			What if we track these house with geo locations, pictures and status, so that everyone can go there
+			an occupy it.&lt;/br&gt;
+			These houses will get a traffic light system. Red means already occupied. Green means empty. 
+			And orange means somebody is living there an wants someone else to join.
+		&lt;/p&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row featured-box-minimal&quot;&gt; 
+	&lt;div class=&quot;col-md-12&quot;&gt;
+		&lt;h4&gt;&lt;i class=&quot;fa fa-users&quot;&gt;&lt;/i&gt; Travel&lt;/h4&gt;
+		&lt;p&gt;
+			You want to travel. You have got a spare room. These this plugin can help you to connect each other.
+			We don&#x27;t have to pay for expensive hotels.
+		&lt;/p&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row featured-box-minimal&quot;&gt; 
+	&lt;div class=&quot;col-md-12&quot;&gt;
+		&lt;h4&gt;&lt;i class=&quot;fa fa-users&quot;&gt;&lt;/i&gt; Ride Share&lt;/h4&gt;
+		&lt;p&gt;
+			You want to travel with your car and have got spare space, then this plugin may connect people.
+		&lt;/p&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row featured-box-minimal&quot;&gt; 
+	&lt;div class=&quot;col-md-12&quot;&gt;
+		&lt;h4&gt;&lt;i class=&quot;fa fa-users&quot;&gt;&lt;/i&gt; Hands&lt;/h4&gt;
+		&lt;p&gt;
+			You need help in the garden for harvesting food. This plugin might connect you with helpers.
+		&lt;/p&gt;
+	&lt;/div&gt;
+&lt;/div&gt;"
+                    adminlabel: "Ideas"
+                }
+            }
+        }
+    }
+
+    Section {
         id:  art
 
         Row {
