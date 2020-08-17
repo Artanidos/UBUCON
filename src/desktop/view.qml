@@ -42,14 +42,14 @@ ApplicationWindow
             font.pixelSize: window.height / 20
             onClicked: 
             {
-                    if (stackview.depth > 1) 
-                    {
-                        stackview.pop()
-                    } 
-                    else 
-                    {
-                        drawer.open()
-                    }
+                if (stackview.depth > 1) 
+                {
+                    stackview.pop()
+                } 
+                else 
+                {
+                    drawer.open()
+                }
             }    
         }
 
@@ -118,6 +118,6 @@ ApplicationWindow
 
     function message(text)
     {
-        txt.text = text
+        //txt.text = text
     }
 }

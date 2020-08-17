@@ -44,7 +44,7 @@
         <activity
             android:name="org.qtproject.qt5.android.bindings.QtActivity"
             android:configChanges="orientation|uiMode|screenLayout|screenSize|smallestScreenSize|layoutDirection|locale|fontScale|keyboard|keyboardHidden|navigation|mcc|mnc|density"
-            android:label="UBOCON"
+            android:label="UBUCON"
             android:launchMode="singleTop"
             android:screenOrientation="unspecified"
             android:theme="@style/AppTheme" >

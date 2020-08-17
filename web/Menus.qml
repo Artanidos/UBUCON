@@ -7,26 +7,25 @@ Menus {
             title: 'Home'
             url: '#wrapper'
             icon: ''
+            attributes: "class=\"scrollTo\""
         }
         Menuitem {
             title: 'Features'
             url: '#features'
             icon: ''
+            attributes: "class=\"scrollTo\""
         }
         Menuitem {
             title: 'Team'
             url: '#team'
             icon: ''
-        }
-        Menuitem {
-            title: 'Blog'
-            url: 'blog.html'
-            icon: ''
+            attributes: "class=\"scrollTo\""
         }
         Menuitem {
             title: 'Contact'
             url: '#contact'
             icon: ''
+            attributes: "class=\"scrollTo\""
         }
     }
 }

@@ -28,26 +28,54 @@ Page
 	id: page
 	title: "UBUCON"
 
-    Image 
+    ListView 
     {
-        id: image
-        height: page.height / 4
-        source: "/media/art/data/SourceCode/UBUCON/images/cuddle.jpeg"
-        fillMode: Image.PreserveAspectFit
-        anchors.top: parent.top
-    	anchors.right: parent.right
-    	anchors.left: parent.left
-    	anchors.margins: page.width / 10
-    }
+        focus: true
+        currentIndex: 1
+        anchors.fill: parent
 
-    Text
-    {
-        width: parent.width - page.width / 5
-        text: "Ipsum lorem molor smit ahmend funida masala bepoz"
-        wrapMode: Text.WordWrap
-        anchors.top: image.bottom
-        anchors.left: parent.left
-        anchors.right: parent.right
-        anchors.margins: page.width / 10
+        delegate: ItemDelegate 
+        {
+            width: parent.width
+            height: image.height + text.height + 30
+
+            Image 
+            {
+                id: image
+                width: page.width
+                source: model.image
+                fillMode: Image.PreserveAspectFit
+                anchors.top: parent.top
+                anchors.right: parent.right
+                anchors.left: parent.left
+                //anchors.margins: page.width / 10
+            }
+
+            Text
+            {
+                id: text
+                width: page.width
+                text: model.text
+                wrapMode: Text.WordWrap
+                anchors.top: image.bottom
+                anchors.left: parent.left
+                anchors.right: parent.right
+                //anchors.margins: page.width / 10
+            }
+        }
+
+        model: ListModel 
+        {
+            ListElement 
+            {
+                image: "/media/art/data/SourceCode/UBUCON/images/cuddle.jpeg"
+                text: "Ipsum lorem molor smit ahmend funida masala bepoz"
+            }
+            ListElement 
+            {
+                image: "/media/art/data/SourceCode/UBUCON/images/ubuntu_banner.png"
+            	text: "Ipsum lorem molor smit ahmend funida masala bepoz"
+            }
+        }
     }
 } 

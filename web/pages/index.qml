@@ -291,7 +291,6 @@ Would you like to see a solution, then keep reading on.
     }
 
     Section {
-        id:  art
 
         Row {
 
@@ -304,6 +303,51 @@ Would you like to see a solution, then keep reading on.
                 }
             }
         }
+
+        Row {
+
+            Column {
+                span: 9
+
+                Text {
+                    text: "&lt;div class=&quot;white-row&quot;&gt;
+	&lt;h3&gt;About &lt;strong&gt;Meli&lt;/strong&gt; (Initiator)&lt;/h3&gt;
+	&lt;p&gt;&lt;strong&gt;Meli&lt;/strong&gt; is one of the organisators of the UBUNTU festival in 2020.
+	&lt;/p&gt;
+&lt;/div&gt;"
+                }
+            }
+
+            Column {
+                span: 3
+
+                Text {
+                    text: "&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-12 col-md-12&quot;&gt;
+		&lt;div class=&quot;item-box fixed-box&quot;&gt;
+			&lt;figure&gt;
+				&lt;img class=&quot;img-responsive&quot; src=&quot;assets/images/meli.png&quot; width=&quot;263&quot; height=&quot;263&quot; alt=&quot;&quot;/&gt;
+			&lt;/figure&gt;
+			&lt;div class=&quot;item-box-desc&quot;&gt;
+				&lt;h4&gt;Meli Jurak&lt;/h4&gt;
+				&lt;small class=&quot;styleColor&quot;&gt;Todo&lt;/small&gt;
+				&lt;p&gt;&lt;a href=&quot;mailto:todo&quot;&gt;Meli&lt;/a&gt; todo&lt;/p&gt;
+				&lt;div class=&quot;row socials&quot;&gt;
+					&lt;a href=&quot;https://www.facebook.com/meli.jurak&quot; class=&quot;social fa fa-facebook&quot;&gt;&lt;/a&gt;
+					&lt;!-- a href=&quot;#&quot; class=&quot;social fa fa-twitter&quot;&gt;&lt;/a&gt;
+					&lt;a href=&quot;#&quot; class=&quot;social fa fa-google-plus&quot;&gt;&lt;/a --&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;"
+                }
+            }
+        }
+    }
+
+    Section {
+        id:  team
 
         Row {
 

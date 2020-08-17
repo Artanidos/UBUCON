@@ -9,4 +9,5 @@ Site {
    author: 'Art'
    logo: 'logo.png'
    publisher: 'GithubPublisher'
+   output: "../docs"
 }
