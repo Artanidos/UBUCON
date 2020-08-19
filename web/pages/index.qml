@@ -291,6 +291,7 @@ Would you like to see a solution, then keep reading on.
     }
 
     Section {
+        id:  team
 
         Row {
 
@@ -298,8 +299,55 @@ Would you like to see a solution, then keep reading on.
                 span: 12
 
                 Text {
-                    text: "&lt;h2&gt;&lt;strong&gt;Team&lt;/strong&gt;&lt;/h2&gt;"
+                    text: "&lt;h2 class=&quot;margin-top80&quot;&gt;&lt;strong&gt;Team&lt;/strong&gt;&lt;/h2&gt;"
                     adminlabel: "Team"
+                }
+            }
+        }
+
+        Row {
+
+            Column {
+                span: 3
+
+                Text {
+                    text: "&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-12 col-md-12&quot;&gt;
+		&lt;div class=&quot;item-box fixed-box&quot;&gt;
+			&lt;figure&gt;
+				&lt;img class=&quot;img-responsive&quot; src=&quot;assets/images/bauchi.png&quot; width=&quot;263&quot; height=&quot;263&quot; alt=&quot;&quot;/&gt;
+			&lt;/figure&gt;
+			&lt;div class=&quot;item-box-desc&quot;&gt;
+				&lt;h4&gt;Jesus Bruder Bauchi&lt;/h4&gt;
+				&lt;small class=&quot;styleColor&quot;&gt;+34 602 505 181&lt;/small&gt;
+				&lt;p&gt;&lt;a href=&quot;mailto:jesusurlauber@yahoo.de&quot;&gt;Bauchi&lt;/a&gt;&lt;/p&gt;
+				&lt;div class=&quot;row socials&quot;&gt;
+					&lt;a href=&quot;https://www.facebook.com/jesus.urlauber&quot; class=&quot;social fa fa-facebook&quot;&gt;&lt;/a&gt;
+					&lt;!-- a href=&quot;#&quot; class=&quot;social fa fa-twitter&quot;&gt;&lt;/a&gt;
+					&lt;a href=&quot;#&quot; class=&quot;social fa fa-google-plus&quot;&gt;&lt;/a --&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;"
+                    adminlabel: "Bauchi"
+                }
+            }
+
+            Column {
+                span: 9
+
+                Text {
+                    text: "&lt;div class=&quot;white-row&quot;&gt;
+	&lt;h3&gt;About &lt;strong&gt;Bauchi&lt;/strong&gt; (Initiator)&lt;/h3&gt;
+	&lt;p&gt;
+		&lt;strong&gt;Bauchi&lt;/strong&gt; is one of the organisators of the UBUNTU festival in 2020.&lt;/br&gt;
+		&quot;Bauchi&quot; is the short form of &quot;Bauchmensch&quot;.&lt;/br&gt;
+		By definition someone who follows his INTUITION.&lt;/br&gt;
+		And that&#x27;s exactly what he is living. Abstruse and stubborn until you drop.&lt;/br&gt;
+		Have a look at his &lt;a href=&quot;http://lest2020.de&quot;&gt;website&lt;/a&gt; for more information.
+	&lt;/p&gt;
+&lt;/div&gt;"
                 }
             }
         }
@@ -312,7 +360,10 @@ Would you like to see a solution, then keep reading on.
                 Text {
                     text: "&lt;div class=&quot;white-row&quot;&gt;
 	&lt;h3&gt;About &lt;strong&gt;Meli&lt;/strong&gt; (Initiator)&lt;/h3&gt;
-	&lt;p&gt;&lt;strong&gt;Meli&lt;/strong&gt; is one of the organisators of the UBUNTU festival in 2020.
+	&lt;p&gt;
+		&lt;strong&gt;Meli&lt;/strong&gt; is one of the organisators of the UBUNTU festival in 2020.&lt;/br&gt;
+		She is an author, energetic worker, she creates videos about awareness and meditation.&lt;/br&gt;
+		Have a look at her &lt;a href=&quot;https://www.melijurak.com&quot;&gt;website&lt;/a&gt; for more information.
 	&lt;/p&gt;
 &lt;/div&gt;"
                 }
@@ -330,8 +381,8 @@ Would you like to see a solution, then keep reading on.
 			&lt;/figure&gt;
 			&lt;div class=&quot;item-box-desc&quot;&gt;
 				&lt;h4&gt;Meli Jurak&lt;/h4&gt;
-				&lt;small class=&quot;styleColor&quot;&gt;Todo&lt;/small&gt;
-				&lt;p&gt;&lt;a href=&quot;mailto:todo&quot;&gt;Meli&lt;/a&gt; todo&lt;/p&gt;
+				&lt;small class=&quot;styleColor&quot;&gt;Graz +43 660/21 65 996&lt;/small&gt;
+				&lt;p&gt;&lt;a href=&quot;mailto:office@melaniejurak.com&quot;&gt;Meli&lt;/a&gt; lives and works in Austria.&lt;/p&gt;
 				&lt;div class=&quot;row socials&quot;&gt;
 					&lt;a href=&quot;https://www.facebook.com/meli.jurak&quot; class=&quot;social fa fa-facebook&quot;&gt;&lt;/a&gt;
 					&lt;!-- a href=&quot;#&quot; class=&quot;social fa fa-twitter&quot;&gt;&lt;/a&gt;
@@ -341,13 +392,10 @@ Would you like to see a solution, then keep reading on.
 		&lt;/div&gt;
 	&lt;/div&gt;
 &lt;/div&gt;"
+                    adminlabel: "Meli"
                 }
             }
         }
-    }
-
-    Section {
-        id:  team
 
         Row {
 
@@ -359,11 +407,11 @@ Would you like to see a solution, then keep reading on.
 	&lt;div class=&quot;col-sm-12 col-md-12&quot;&gt;
 		&lt;div class=&quot;item-box fixed-box&quot;&gt;
 			&lt;figure&gt;
-				&lt;img class=&quot;img-responsive&quot; src=&quot;assets/images/olaf.jpg&quot; width=&quot;263&quot; height=&quot;263&quot; alt=&quot;&quot;/&gt;
+				&lt;img class=&quot;img-responsive&quot; src=&quot;assets/images/olaf.png&quot; width=&quot;263&quot; height=&quot;263&quot; alt=&quot;&quot;/&gt;
 			&lt;/figure&gt;
 			&lt;div class=&quot;item-box-desc&quot;&gt;
 				&lt;h4&gt;Olaf Art Ananda&lt;/h4&gt;
-				&lt;small class=&quot;styleColor&quot;&gt;Monchique (+351) 969 31 28 08&lt;/small&gt;
+				&lt;small class=&quot;styleColor&quot;&gt;Monchique +351 969 31 28 08&lt;/small&gt;
 				&lt;p&gt;&lt;a href=&quot;mailto:artanidos@gmail.com&quot;&gt;Art&lt;/a&gt; currently lives in Potugal.&lt;/p&gt;
 				&lt;div class=&quot;row socials&quot;&gt;
 					&lt;a href=&quot;https://www.facebook.com/artanidos&quot; class=&quot;social fa fa-facebook&quot;&gt;&lt;/a&gt;
@@ -383,7 +431,7 @@ Would you like to see a solution, then keep reading on.
 
                 Text {
                     text: "&lt;div class=&quot;white-row&quot;&gt;
-	&lt;h3&gt;About &lt;strong&gt;Art&lt;/strong&gt; (Teamleader)&lt;/h3&gt;
+	&lt;h3&gt;About &lt;strong&gt;Art&lt;/strong&gt; (Technical Teamleader)&lt;/h3&gt;
 	&lt;p&gt;&lt;strong&gt;Art&lt;/strong&gt; was a software developer and designer for a long time until he attended his 
 	first tantric massage workshop in 2014.
 	Since that day he has completely turned his life upside down. He quit his well-paid job in Switzerland and
@@ -398,31 +446,6 @@ Would you like to see a solution, then keep reading on.
 
 
  "
-                }
-
-                Text {
-                    text: "&lt;div class=&quot;white-row&quot;&gt;
-&lt;h3&gt;&lt;strong&gt;Education&lt;/strong&gt;&lt;/h3&gt;
-&lt;ul&gt;
-	&lt;li&gt;Lomi Lomi Nui 2 (Anja and Jana Goralski)&lt;/li&gt;
-	&lt;li&gt;Lomi Lomi Nui 1 (Anja and Jana Goralski)&lt;/li&gt;
-	&lt;li&gt;Tantramassage Level 2 (Suriya, Eva, Saranam)&lt;/li&gt;
-	&lt;li&gt;Yin-Yang-Massage (Frank Lerch)&lt;/li&gt;
-	&lt;li&gt;Lingam Intensiv (Suriya, Eva)&lt;/li&gt;
-	&lt;li&gt;Tantramassage Level 1 (Suriya, Eva, Saranam)&lt;/li&gt;
-	&lt;li&gt;The Art of Touch 2 (Somananda Moses Maimon)&lt;/li&gt;
-	&lt;li&gt;Ausbildung zum Sexological Bodyworker (Didi Liebold, Janine Hug)&lt;/li&gt;
-	&lt;li&gt;Beckenboden, Anal- und Prostatamassage (Jacqueline Schönbächler, Dr. Eva Thiel)&lt;/li&gt;
-	&lt;li&gt;Yonimassage Aufbaukurs (Jacqueline Schönbächler)&lt;/li&gt;
-	&lt;li&gt;Basis Ausbildung Tantra Massage (Jacqueline Schönbächler)&lt;/li&gt;
-	&lt;li&gt;Studium Human Computer Interaction Design (UNI Rapperswil, Basel)&lt;/li&gt;
-	&lt;li&gt;Fernstudium Grafik Design (Studien Gemeinschaft Darmstadt)&lt;/li&gt;
-	&lt;li&gt;Autodidact Softwareentwicklung&lt;/li&gt;
-	&lt;li&gt;Ausbildung zum Maschinenschlosser (Deutsche Audco)&lt;/li&gt;
-	&lt;li&gt;Realschule (Egenbüttel)&lt;/li&gt;	
-&lt;/ul&gt;
-&lt;/div&gt;"
-                    adminlabel: "Education"
                 }
             }
         }

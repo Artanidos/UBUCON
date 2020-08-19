@@ -76,6 +76,11 @@ Page
                 image: "/media/art/data/SourceCode/UBUCON/images/ubuntu_banner.png"
             	text: "Ipsum lorem molor smit ahmend funida masala bepoz"
             }
+            ListElement 
+            {
+                image: "/media/art/data/SourceCode/UBUCON/images/natur.jpg"
+            	text: "Ipsum lorem molor smit ahmend funida masala bepoz"
+            }
         }
     }
 } 
