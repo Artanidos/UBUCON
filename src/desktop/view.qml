@@ -29,39 +29,6 @@ ApplicationWindow
     width: 1024
     height: 500
 
-    header: ToolBar 
-    {
-    	height: window.height / 15
-    	Material.background: Material.Green
-        ToolButton 
-        {
-            id: menuButton
-            anchors.left: parent.left
-            anchors.verticalCenter: parent.verticalCenter
-            text: stackview.depth > 1 ? "￩" : "≡"  //"⟵⬅￩
-            font.pixelSize: window.height / 20
-            onClicked: 
-            {
-                if (stackview.depth > 1) 
-                {
-                    stackview.pop()
-                } 
-                else 
-                {
-                    drawer.open()
-                }
-            }    
-        }
-
-        Label 
-        {
-            anchors.centerIn: parent
-            text: stackview.currentItem.title
-            font.pixelSize: window.height / 25
-            elide: Label.ElideRight
-        }
-    }
-
     StackView 
     {
     	id: stackview

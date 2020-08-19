@@ -39,27 +39,27 @@ Page
             width: parent.width
             height: image.height + text.height + 30
 
-            Image 
-            {
-                id: image
-                width: page.width
-                source: model.image
-                fillMode: Image.PreserveAspectFit
-                anchors.top: parent.top
-                anchors.right: parent.right
-                anchors.left: parent.left
-                //anchors.margins: page.width / 10
-            }
-
             Text
             {
                 id: text
                 width: page.width
                 text: model.text
                 wrapMode: Text.WordWrap
-                anchors.top: image.bottom
+                font.pixelSize: 17
+                anchors.top: parent.top
                 anchors.left: parent.left
                 anchors.right: parent.right
+                //anchors.margins: page.width / 10
+            }
+            Image 
+            {
+                id: image
+                width: page.width
+                source: model.image
+                fillMode: Image.PreserveAspectFit
+                anchors.top: text.bottom
+                anchors.right: parent.right
+                anchors.left: parent.left
                 //anchors.margins: page.width / 10
             }
         }
@@ -69,17 +69,17 @@ Page
             ListElement 
             {
                 image: "/media/art/data/SourceCode/UBUCON/images/cuddle.jpeg"
-                text: "Ipsum lorem molor smit ahmend funida masala bepoz"
+                text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
             }
             ListElement 
             {
                 image: "/media/art/data/SourceCode/UBUCON/images/ubuntu_banner.png"
-            	text: "Ipsum lorem molor smit ahmend funida masala bepoz"
+            	text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
             }
             ListElement 
             {
                 image: "/media/art/data/SourceCode/UBUCON/images/natur.jpg"
-            	text: "Ipsum lorem molor smit ahmend funida masala bepoz"
+            	text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
             }
         }
     }
