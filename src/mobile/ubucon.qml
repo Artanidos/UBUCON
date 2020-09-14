@@ -25,52 +25,65 @@ import QtQuick.Controls.Material 2.12
 import QtQuick.Controls.Universal 2.12
 import Qt.labs.settings 1.0
 
-ApplicationWindow {
+ApplicationWindow 
+{
     id: window
     width: 360
     height: 520
     visible: true
-    title: "Qt Quick Controls 2"
+    title: "UBUCON"
 
-    Settings {
+    Settings 
+    {
         id: settings
         property string style: "Default"
     }
 
-    Shortcut {
+    Shortcut 
+    {
         sequences: ["Esc", "Back"]
         enabled: stackView.depth > 1
-        onActivated: {
+        onActivated: 
+        {
             stackView.pop()
             listView.currentIndex = -1
         }
     }
 
-    Shortcut {
+    Shortcut 
+    {
         sequence: "Menu"
         onActivated: optionsMenu.open()
     }
 
-    header: ToolBar {
+    header: ToolBar 
+    {
         Material.foreground: "white"
 
-        RowLayout {
+        RowLayout 
+        {
             spacing: 20
             anchors.fill: parent
 
-            ToolButton {
+            ToolButton 
+            {
                 icon.name: stackView.depth > 1 ? "back" : "drawer"
-                onClicked: {
-                    if (stackView.depth > 1) {
+                onClicked: 
+                {
+                    if (stackView.depth > 1) 
+                    {
                         stackView.pop()
                         listView.currentIndex = -1
-                    } else {
+                    } 
+                    else 
+                    {
                         drawer.open()
                     }
                 }
             }
 
-            Label {
+            Label 
+            {
                 id: titleLabel
                 text: listView.currentItem ? listView.currentItem.text : "UBUCON"
                 font.pixelSize: 20
@@ -80,20 +93,24 @@ ApplicationWindow {
                 Layout.fillWidth: true
             }
 
-            ToolButton {
+            ToolButton 
+            {
                 icon.name: "menu"
                 onClicked: optionsMenu.open()
 
-                Menu {
+                Menu 
+                {
                     id: optionsMenu
                     x: parent.width - width
                     transformOrigin: Menu.TopRight
 
-                    MenuItem {
+                    MenuItem 
+                    {
                         text: "Settings"
                         onTriggered: settingsDialog.open()
                     }
-                    MenuItem {
+                    MenuItem 
+                    {
                         text: "About"
                         onTriggered: aboutDialog.open()
                     }
@@ -102,31 +119,36 @@ ApplicationWindow {
         }
     }
 
-    Drawer {
+    Drawer 
+    {
         id: drawer
         width: Math.min(window.width, window.height) / 3 * 2
         height: window.height
         interactive: stackView.depth === 1
 
-        ListView {
+        ListView 
+        {
             id: listView
 
             focus: true
             currentIndex: -1
             anchors.fill: parent
 
-            delegate: ItemDelegate {
+            delegate: ItemDelegate 
+            {
                 width: parent.width
                 text: model.title
                 highlighted: ListView.isCurrentItem
-                onClicked: {
+                onClicked: 
+                {
                     listView.currentIndex = index
                     stackView.push(model.source)
                     drawer.close()
                 }
             }
 
-            model: ListModel {
+            model: ListModel 
+            {
                 ListElement { title: "Test"; source: "qrc:/gui/Test.qml" }
                 ListElement { title: "Button"; source: "qrc:/pages/ButtonPage.qml" }
             }
@@ -135,24 +157,28 @@ ApplicationWindow {
         }
     }
 
-    StackView {
+    StackView 
+    {
         id: stackView
         anchors.fill: parent
 
-        initialItem: Pane {
+        initialItem: Pane 
+        {
             id: pane
 
-            Image {
+            Image 
+            {
                 id: logo
                 width: pane.availableWidth / 2
                 height: pane.availableHeight / 2
                 anchors.centerIn: parent
                 anchors.verticalCenterOffset: -50
                 fillMode: Image.PreserveAspectFit
-                source: "images/qt-logo.png"
+                source: "images/logo.png"
             }
 
-            Label {
+            Label 
+            {
                 text: "You cannot delete posts, so think twice before posting bullshit."
                 anchors.margins: 20
                 anchors.top: logo.bottom
@@ -164,7 +190,8 @@ ApplicationWindow {
                 wrapMode: Label.Wrap
             }
 
-            Image {
+            Image 
+            {
                 id: arrow
                 source: "images/arrow.png"
                 anchors.left: parent.left
@@ -173,7 +200,8 @@ ApplicationWindow {
         }
     }
 
-    Dialog {
+    Dialog 
+    {
         id: settingsDialog
         x: Math.round((window.width - width) / 2)
         y: Math.round(window.height / 6)
@@ -183,7 +211,8 @@ ApplicationWindow {
         title: "Settings"
 
         standardButtons: Dialog.Ok | Dialog.Cancel
-        onAccepted: {
+        onAccepted: 
+        {
             settings.style = styleBox.displayText
             settingsDialog.close()
         }
@@ -192,22 +221,27 @@ ApplicationWindow {
             settingsDialog.close()
         }
 
-        contentItem: ColumnLayout {
+        contentItem: ColumnLayout 
+        {
             id: settingsColumn
             spacing: 20
 
-            RowLayout {
+            RowLayout 
+            {
                 spacing: 10
 
-                Label {
+                Label 
+                {
                     text: "Style:"
                 }
 
-                ComboBox {
+                ComboBox 
+                {
                     id: styleBox
                     property int styleIndex: -1
                     model: availableStyles
-                    Component.onCompleted: {
+                    Component.onCompleted: 
+                    {
                         styleIndex = find(settings.style, Qt.MatchFixedString)
                         if (styleIndex !== -1)
                             currentIndex = styleIndex
@@ -216,7 +250,8 @@ ApplicationWindow {
                 }
             }
 
-            Label {
+            Label 
+            {
                 text: "Restart required"
                 color: "#e41e25"
                 opacity: styleBox.currentIndex !== styleBox.styleIndex ? 1.0 : 0.0
@@ -233,7 +268,7 @@ ApplicationWindow {
         id: aboutDialog
         modal: true
         focus: true
-        title: "Über"
+        title: "About"
         x: (window.width - width) / 2
         y: window.height / 6
         width: Math.min(window.width, window.height) / 3 * 2

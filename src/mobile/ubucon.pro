@@ -34,7 +34,8 @@ RESOURCES += \
     images/qt-logo.png \
     images/qt-logo@2x.png \
     images/qt-logo@3x.png \
-    images/qt-logo@4x.png
+    images/qt-logo@4x.png \
+    images/logo.png
 
 target.path = $$PWD/quickcontrols2/ubucon
 INSTALLS += target
