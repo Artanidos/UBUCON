@@ -1,0 +1,1 @@
+pyrcc5 main.qrc -o lib/main_rc.py

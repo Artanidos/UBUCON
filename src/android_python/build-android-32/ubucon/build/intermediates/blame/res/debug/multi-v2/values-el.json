@@ -1,0 +1,26 @@
+{
+    "logs": [
+        {
+            "outputFile": "/media/art/data/SourceCode/UBUCON/src/android/build-android-32/ubucon/build/intermediates/incremental/mergeDebugResources/merged.dir/values-el/values-el.xml",
+            "map": [
+                {
+                    "source": "/media/art/data/qt/5.12.3/android_armv7/src/android/java/res/values-el/strings.xml",
+                    "from": {
+                        "startLines": "4,3,2,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "316,198,55,433",
+                        "endColumns": "116,117,142,100",
+                        "endOffsets": "428,311,193,529"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,172,290,433",
+                        "endColumns": "116,117,142,100",
+                        "endOffsets": "167,285,428,529"
+                    }
+                }
+            ]
+        }
+    ]
+}

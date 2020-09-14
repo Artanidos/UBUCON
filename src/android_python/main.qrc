@@ -1,0 +1,13 @@
+<RCC>
+    <qresource>
+        <file>view.qml</file>
+        <file>Home.qml</file>
+        <file>Feed.qml</file>
+        <file>Menubar.qml</file>
+        <file>Searchpanel.qml</file>
+        <file>images/profile.svg</file>
+        <file>images/cuddle.jpeg</file>
+        <file>images/natur.jpg</file>
+        <file>images/ubuntu_banner.png</file>
+    </qresource>
+</RCC>

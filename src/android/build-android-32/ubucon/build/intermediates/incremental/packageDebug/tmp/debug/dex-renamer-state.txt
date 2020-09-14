@@ -1,4 +1,0 @@
-#Sat Aug 08 10:08:49 WEST 2020
-base.0=/media/art/data/SourceCode/UBUCON/src/android/build-android-32/ubucon/build/intermediates/transforms/dexMerger/debug/0
-path.0=classes.dex
-renamed.0=classes.dex

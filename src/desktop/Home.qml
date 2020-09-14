@@ -49,7 +49,6 @@ Page
                 anchors.top: parent.top
                 anchors.left: parent.left
                 anchors.right: parent.right
-                //anchors.margins: page.width / 10
             }
             Image 
             {
@@ -60,7 +59,6 @@ Page
                 anchors.top: text.bottom
                 anchors.right: parent.right
                 anchors.left: parent.left
-                //anchors.margins: page.width / 10
             }
         }
 

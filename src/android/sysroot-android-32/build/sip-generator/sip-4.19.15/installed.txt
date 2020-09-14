@@ -1,4 +1,0 @@
-/usr/lib/python3/dist-packages/sipconfig.py
-/usr/lib/python3/dist-packages/sipdistutils.py
-/media/art/data/SourceCode/UBUCON/src/sysroot-android-32/include/python3.7/sip.h
-/media/art/data/SourceCode/UBUCON/src/sysroot-android-32/host/bin/sip
