@@ -149,8 +149,7 @@ ApplicationWindow
 
             model: ListModel 
             {
-                ListElement { title: "Test"; source: "qrc:/gui/Test.qml" }
-                ListElement { title: "Button"; source: "qrc:/pages/ButtonPage.qml" }
+                ListElement { title: "Home"; source: "qrc:/gui/Home.qml" }
             }
 
             ScrollIndicator.vertical: ScrollIndicator { }
@@ -161,7 +160,6 @@ ApplicationWindow
     {
         id: stackView
         anchors.fill: parent
-
         initialItem: Pane 
         {
             id: pane

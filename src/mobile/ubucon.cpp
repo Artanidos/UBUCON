@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 
     QGuiApplication app(argc, argv);
 
-    QIcon::setThemeName("gallery");
+    QIcon::setThemeName("ubucon");
 
     QSettings settings;
     QString style = QQuickStyle::name();
