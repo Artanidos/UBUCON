@@ -44,7 +44,7 @@ Item
             {
                 anchors.horizontalCenter: parent.horizontalCenter
                 anchors.verticalCenter: parent.verticalCenter
-                source: "qrc:/images/home.svg"
+                source: "qrc:/images/home.png"
             }
         }
 
@@ -56,7 +56,7 @@ Item
             {
                 anchors.horizontalCenter: parent.horizontalCenter
                 anchors.verticalCenter: parent.verticalCenter
-                source: "qrc:/images/search.svg"
+                source: "qrc:/images/search.png"
             }
         }
 
@@ -78,7 +78,7 @@ Item
             {
                 anchors.horizontalCenter: parent.horizontalCenter
                 anchors.verticalCenter: parent.verticalCenter
-                source: "qrc:/images/notify.svg"
+                source: "qrc:/images/notify.png"
             }
         }
 
@@ -91,7 +91,7 @@ Item
             {
                 anchors.horizontalCenter: parent.horizontalCenter
                 anchors.verticalCenter: parent.verticalCenter
-                source: "qrc:/images/chat.svg"
+                source: "qrc:/images/chat.png"
             }
         }
     }

@@ -31,10 +31,10 @@ RESOURCES += \
     images/cuddle.jpeg \
     images/natur.jpg \
     images/ubuntu_banner.png \
-    images/search.svg \
-    images/notify.svg \
-    images/home.svg \
-    images/chat.svg
+    images/search.png \
+    images/notify.png \
+    images/home.png \
+    images/chat.png \
 
 target.path = $$PWD/quickcontrols2/ubucon
 INSTALLS += target
