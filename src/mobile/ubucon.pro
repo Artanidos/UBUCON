@@ -35,6 +35,7 @@ RESOURCES += \
     images/notify.png \
     images/home.png \
     images/chat.png \
+    images/profile.png \
 
 target.path = $$PWD/quickcontrols2/ubucon
 INSTALLS += target

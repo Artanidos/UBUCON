@@ -29,7 +29,7 @@ Item
     property string feed_text: ""
     property string feed_image: ""
     property string feed_caption: ""
-    height: txt.height //+ image.height + profileButton.height
+    height: txt.height + image.height + profileButton.height
 
     Column
     {
@@ -38,16 +38,16 @@ Item
         Row
         {
              width: parent.width
-            /*ToolButton 
+            ToolButton 
             {
                 id: profileButton
                 width: 50
                 height: 50
                 Image 
                 {
-                    source: "qrc:/images/profile.svg"
+                    source: "qrc:/images/profile.png"
                 }
-            }*/
+            }
 
             Text
             {
@@ -66,13 +66,13 @@ Item
             wrapMode: Text.WordWrap
         }
 
-        /*Image
+        Image
         {
             id: image
             source: feed_image
             width: parent.width
             fillMode: Image.PreserveAspectFit
-        }*/
+        }
     }
 }
 
