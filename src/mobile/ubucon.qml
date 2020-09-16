@@ -196,6 +196,7 @@ ApplicationWindow
                 anchors.bottom: parent.bottom
             }
         }
+        
     }
 
     Dialog 

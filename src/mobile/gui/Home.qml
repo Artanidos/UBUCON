@@ -59,6 +59,7 @@ Page
             height: 700
             boundsBehavior: Flickable.DragOverBounds
             boundsMovement: Flickable.FollowBoundsBehavior
+            contentHeight: 2000 // todo: calc feed height
             clip: true
 
             Column

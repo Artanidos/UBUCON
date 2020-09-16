@@ -29,7 +29,7 @@ Item
     property string feed_text: ""
     property string feed_image: ""
     property string feed_caption: ""
-    height: txt.height + image.height + profileButton.height
+    height: txt.height + image.height + profileButton.height + spacer.height
 
     Column
     {
@@ -72,6 +72,14 @@ Item
             source: feed_image
             width: parent.width
             fillMode: Image.PreserveAspectFit
+        }
+
+        Rectangle
+        {
+            id: spacer
+            width: parent.width
+            height: 13
+            color: "#c0c0c0"
         }
     }
 }
