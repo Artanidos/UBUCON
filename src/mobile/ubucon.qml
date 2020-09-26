@@ -67,7 +67,7 @@ ApplicationWindow
 
             ToolButton 
             {
-                icon.name: stackView.depth > 1 ? "back" : "drawer"
+                icon.name: stackView.depth > 2 ? "back" : "drawer"
                 onClicked: 
                 {
                     if (stackView.depth > 1) 
@@ -195,8 +195,16 @@ ApplicationWindow
                 anchors.left: parent.left
                 anchors.bottom: parent.bottom
             }
+
+            MouseArea
+            {
+                anchors.fill: parent
+                onClicked:
+                {
+                    stackView.push("qrc:/gui/Home.qml")
+                }
+            }
         }
-        
     }
 
     Dialog 
