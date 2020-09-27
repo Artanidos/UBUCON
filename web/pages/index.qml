@@ -335,7 +335,7 @@ Would you like to see a solution, then keep reading on.
             }
 
             Column {
-                span: 9
+                span: 3
 
                 Text {
                     text: "&lt;div class=&quot;white-row&quot;&gt;
@@ -346,24 +346,6 @@ Would you like to see a solution, then keep reading on.
 		By definition someone who follows his INTUITION.&lt;/br&gt;
 		And that&#x27;s exactly what he is living. Abstruse and stubborn until you drop.&lt;/br&gt;
 		Have a look at his &lt;a href=&quot;http://lest2020.de&quot;&gt;website&lt;/a&gt; for more information.
-	&lt;/p&gt;
-&lt;/div&gt;"
-                }
-            }
-        }
-
-        Row {
-
-            Column {
-                span: 9
-
-                Text {
-                    text: "&lt;div class=&quot;white-row&quot;&gt;
-	&lt;h3&gt;About &lt;strong&gt;Meli&lt;/strong&gt; (Initiator)&lt;/h3&gt;
-	&lt;p&gt;
-		&lt;strong&gt;Meli&lt;/strong&gt; is one of the organisators of the UBUNTU festival in 2020.&lt;/br&gt;
-		She is an author, energetic worker, she creates videos about awareness and meditation.&lt;/br&gt;
-		Have a look at her &lt;a href=&quot;https://www.melijurak.com&quot;&gt;website&lt;/a&gt; for more information.
 	&lt;/p&gt;
 &lt;/div&gt;"
                 }
@@ -395,9 +377,64 @@ Would you like to see a solution, then keep reading on.
                     adminlabel: "Meli"
                 }
             }
+
+            Column {
+                span: 3
+
+                Text {
+                    text: "&lt;div class=&quot;white-row&quot;&gt;
+	&lt;h3&gt;About &lt;strong&gt;Meli&lt;/strong&gt; (Initiator)&lt;/h3&gt;
+	&lt;p&gt;
+		&lt;strong&gt;Meli&lt;/strong&gt; is one of the organisators of the UBUNTU festival in 2020.&lt;/br&gt;
+		She is an author, energetic worker, she creates videos about awareness and meditation.&lt;/br&gt;
+		Have a look at her &lt;a href=&quot;https://www.melijurak.com&quot;&gt;website&lt;/a&gt; for more information.
+	&lt;/p&gt;
+&lt;/div&gt;"
+                }
+            }
         }
 
         Row {
+
+            Column {
+                span: 3
+
+                Text {
+                    text: "&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-12 col-md-12&quot;&gt;
+		&lt;div class=&quot;item-box fixed-box&quot;&gt;
+			&lt;figure&gt;
+				&lt;img class=&quot;img-responsive&quot; src=&quot;assets/images/vendetta.png&quot; width=&quot;263&quot; height=&quot;263&quot; alt=&quot;&quot;/&gt;
+			&lt;/figure&gt;
+			&lt;div class=&quot;item-box-desc&quot;&gt;
+				&lt;h4&gt;Omar&lt;/h4&gt;
+				&lt;small class=&quot;styleColor&quot;&gt;Morocco +212 645 525 481&lt;/small&gt;
+				&lt;p&gt;&lt;a href=&quot;&quot;&gt;Omar&lt;/a&gt;&lt;/p&gt;
+				&lt;div class=&quot;row socials&quot;&gt;
+					&lt;a href=&quot;https://www.facebook.com/the.alchemist.man&quot; class=&quot;social fa fa-facebook&quot;&gt;&lt;/a&gt;
+					&lt;!-- a href=&quot;#&quot; class=&quot;social fa fa-twitter&quot;&gt;&lt;/a&gt;
+					&lt;a href=&quot;#&quot; class=&quot;social fa fa-google-plus&quot;&gt;&lt;/a --&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;"
+                }
+            }
+
+            Column {
+                span: 3
+
+                Text {
+                    text: "&lt;div class=&quot;white-row&quot;&gt;
+	&lt;h3&gt;About &lt;strong&gt;Omar&lt;/strong&gt; (Developer)&lt;/h3&gt;
+	&lt;p&gt;&lt;strong&gt;Omar&lt;/strong&gt; is a person who cares about privacy of people.
+
+	&lt;/p&gt;
+&lt;/div&gt;
+"
+                }
+            }
 
             Column {
                 span: 3
@@ -427,7 +464,7 @@ Would you like to see a solution, then keep reading on.
             }
 
             Column {
-                span: 9
+                span: 3
 
                 Text {
                     text: "&lt;div class=&quot;white-row&quot;&gt;
