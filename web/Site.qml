@@ -4,10 +4,10 @@ Site {
    title: 'UBUCON'
    theme: 'atropos'
    description: 'UBUNTU Connection'
-   copyright: '(C) 2020 Olaf Japp. All Rights Reserved.'
+   copyright: '(C) 2020 CrowdWare. All Rights Reserved.'
    keywords: 'ubuntu '
    author: 'Art'
    logo: 'logo.png'
    publisher: 'GithubPublisher'
-   output: "../docs"
+   output: '../docs'
 }
