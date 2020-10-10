@@ -404,7 +404,7 @@ Would you like to see a solution, then keep reading on.
 	&lt;div class=&quot;col-sm-12 col-md-12&quot;&gt;
 		&lt;div class=&quot;item-box fixed-box&quot;&gt;
 			&lt;figure&gt;
-				&lt;img class=&quot;img-responsive&quot; src=&quot;assets/images/vendetta.png&quot; width=&quot;263&quot; height=&quot;263&quot; alt=&quot;&quot;/&gt;
+				&lt;img class=&quot;img-responsive&quot; src=&quot;assets/images/brian_logo.png&quot; width=&quot;263&quot; height=&quot;263&quot; alt=&quot;&quot;/&gt;
 			&lt;/figure&gt;
 			&lt;div class=&quot;item-box-desc&quot;&gt;
 				&lt;h4&gt;Omar&lt;/h4&gt;
