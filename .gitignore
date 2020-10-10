@@ -4,3 +4,4 @@ src/local/shs/__pycache__/
 src/rpc/shs/__pycache__/
 src/ssb/shs/__pycache__/
 src/mobile/build-project/
+.DS_Store
