@@ -1,6 +1,10 @@
 # Architecture
 
-As the base we use Scuttlebut infrastukture. This project already has got a few pubs available and the protocoll is matured.
+As the base we could use Scuttlebut infrastukture. This project already has got a few pubs available and the protocoll is matured.
+
+We might also use an own protocol if it makes sense.
+We can combine a few techniques like storing videos on youtube or vimeo, pictures and feed on Diaspora, where we could use Diaspora for #searching also.
+Locally we only store the key to our own account and those og our friends and friends of friends. So that data is limited. The latest posts and pictures can be chached of course. 
 
 At the client side we use a QML client where we will render all messages using QML instead of HTML. This enables us to create dynamic apps with native widgets.
 
