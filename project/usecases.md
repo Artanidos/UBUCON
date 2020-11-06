@@ -81,3 +81,7 @@
 ## Ads
     As a shop owner you can place products here
     With interaction like online buying
+
+
+## Consensus
+    Make systemic consensing via an app

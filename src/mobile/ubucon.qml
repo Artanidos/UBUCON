@@ -291,7 +291,7 @@ ApplicationWindow
                 width: aboutDialog.availableWidth
                 text: "UBUCON connects us all, until everybody is able to use the innernet."
                 wrapMode: Label.Wrap
-                font.pixelSize: 12
+                font.pixelSize: 15
             }
 
             Label 
@@ -303,7 +303,7 @@ ApplicationWindow
                     + " No server means, also no censorship. No ads."
                     + " Post cannot be deleted, so don't write bullshit."
                 wrapMode: Label.Wrap
-                font.pixelSize: 12
+                font.pixelSize: 15
             }
         }
     }
