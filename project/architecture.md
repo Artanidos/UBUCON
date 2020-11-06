@@ -1,6 +1,6 @@
 # Architecture
 
-As the base we could use Scuttlebut infrastukture. This project already has got a few pubs available and the protocoll is matured.
+As the base we could use Scuttlebut infrastructure. This project already has got a few pubs available and the protocol is matured.
 
 We might also use an own protocol if it makes sense.
 We can combine a few techniques like storing videos on youtube or vimeo, pictures and feed on Diaspora, where we could use Diaspora for #searching also.
