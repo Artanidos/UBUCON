@@ -25,6 +25,9 @@
 #include <QQuickStyle>
 #include <QIcon>
 
+
+
+
 int main(int argc, char *argv[])
 {
     QGuiApplication::setApplicationName("UBUCON");

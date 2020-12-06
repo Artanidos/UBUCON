@@ -1,5 +1,8 @@
-# How to user Kademlia
+# How to use Kademlia
 Website: https://github.com/bmuller/kademlia
+
+# Docu
+https://kademlia.readthedocs.io/en/latest/
 
 ## Install kedemlia
 ```console
