@@ -34,7 +34,19 @@ Content {
 	&lt;strong&gt;Welcome&lt;/strong&gt; to UBUCON
 	&lt;span class=&quot;subtitle&quot;&gt;UBUCON is the short form of UBUNTU Connection&lt;/span&gt;
 &lt;/h1&gt;
-&lt;p class=&quot;lead&quot;&gt;We have got the following situation with social media today:&lt;/p&gt;
+"
+                    adminlabel: "Welcome"
+                }
+            }
+        }
+
+        Row {
+
+            Column {
+                span: 6
+
+                Text {
+                    text: "&lt;p class=&quot;lead&quot;&gt;We have got the following situation with social media today:&lt;/p&gt;
 &lt;div class=&quot;row featured-box-minimal&quot;&gt; 
 	&lt;div class=&quot;col-md-12&quot;&gt;
 		&lt;h4&gt;&lt;i class=&quot;fa fa-users&quot;&gt;&lt;/i&gt; Facebook&lt;/h4&gt;
@@ -77,19 +89,68 @@ Content {
 		&lt;/p&gt;
 	&lt;/div&gt;	
 &lt;/div&gt;
-&lt;div class=&quot;row featured-box-minimal&quot;&gt;
+"
+                }
+            }
+
+            Column {
+                span: 6
+
+                Text {
+                    text: "&lt;p class=&quot;lead&quot;&gt;
+	We also have got a kind of problem with our ecomomy in terms of money.
+&lt;/p&gt;
+&lt;div class=&quot;row featured-box-minimal&quot;&gt; 
+	&lt;div class=&quot;col-md-12&quot;&gt;
+		&lt;h4&gt;&lt;i class=&quot;fa fa-money&quot;&gt;&lt;/i&gt; Diversity&lt;/h4&gt;
+		&lt;p&gt;
+			In almost every country we have got different currencies. If we want to exchange money we have to pay a price fot that.
+		&lt;/p&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row featured-box-minimal&quot;&gt; 
+	&lt;div class=&quot;col-md-12&quot;&gt;
+		&lt;h4&gt;&lt;i class=&quot;fa fa-money&quot;&gt;&lt;/i&gt; Taxes&lt;/h4&gt;
+		&lt;p&gt;
+			It does&#x27;nt matter what we buy or which service we get from others. 
+			We have to pay money and then we also have to pay taxes.
+			Don&#x27;t get me wrong there is nothing bad in collecting taxes to do good things for the community, 
+			but they pay the wars with our money.
+		&lt;/p&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row featured-box-minimal&quot;&gt; 
+	&lt;div class=&quot;col-md-12&quot;&gt;
+		&lt;h4&gt;&lt;i class=&quot;fa fa-money&quot;&gt;&lt;/i&gt; Equality&lt;/h4&gt;
+		&lt;p&gt;
+			Money makes us be unequal. If you were born rich you can have everything and if you were born poor you have to work for the rich.
+		&lt;/p&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+"
+                }
+            }
+        }
+
+        Row {
+
+            Column {
+                span: 12
+
+                Text {
+                    text: "&lt;div class=&quot;row featured-box-minimal&quot;&gt;
 	&lt;div class=&quot;col-md-12&quot;&gt;
 		&lt;h4&gt;&lt;i class=&quot;fa fa-users&quot;&gt;&lt;/i&gt; In General&lt;/h4&gt;
 		&lt;p&gt;
-		All these big players have got one issue. Big brother is looking over their shoulders and can see our messages.
+		All these big players have got one issue. Big brother is looking over their shoulders and can see our messages. And also big brother is controlling us with their money.
 		&lt;/p&gt;
 	&lt;/div&gt;	
 &lt;/div&gt;
-
 &lt;p class=&quot;lead&quot;&gt;
-Would you like to see a solution, then keep reading on.
+Would you like to see a solution for both topics, then keep reading on.
 &lt;/p&gt;"
-                    adminlabel: "Welcome"
                 }
             }
         }
@@ -112,7 +173,7 @@ Would you like to see a solution, then keep reading on.
 			&lt;div class=&quot;white-row&quot;&gt;
 				&lt;h3&gt;&lt;strong&gt;UBUCON&lt;/strong&gt;&lt;/h3&gt;
 				&lt;p class=&quot;lead&quot;&gt;
-					THE PRIVATE SOCIAL MEDIA FROM THE PEOPLE
+					PRIVATE SOCIAL MEDIA AND MONEY FROM THE PEOPLE
 				&lt;/p&gt;
 			&lt;/div&gt;
 		&lt;/div&gt;
@@ -188,13 +249,25 @@ Would you like to see a solution, then keep reading on.
 
 &lt;p&gt;
 	Do you know what UBUNTU is all about?&lt;/br&gt;
-	UBUNTU means, &lt;strong&gt;I am, because we are&lt;/strong&gt;. We are helping each other, without asking for money or something in exchange.&lt;/br&gt;
-	As Meli asked me in August 2020, if I would start this project for the UBUNTU movement, then I immediatly said, YES.&lt;/br&gt;
-	I was just happy to get this project. All my life I was steering into this direction. I felt the call years before.
+	UBUNTU means, &lt;strong&gt;I am, because we are&lt;/strong&gt;. We are helping each other, without asking for 
+	money or something in exchange.&lt;/br&gt;
+	If the developers believe in their app they are working on, they will also accept THX as their payment.&lt;/br&gt;
+	Everybody who likes the idea will spread the word, making this thing happen and they will also collect 
+	some coins (THX) for their effort.&lt;/br&gt;
+	And when we have motivated like a million people to use the app, then we have already enough people
+	to accept THX as a currency. I think it&#x27;s more worth than the fiat money, 
+	because it&#x27;s money from the people.&lt;/br&gt;
+
+	As Meli asked me in August 2020, if I would start this project for the UBUNTU movement, 
+	then I immediatly said, YES.&lt;/br&gt;
+	I was just happy to get this project. All my life I was steering into this direction. 
+	I felt the call years before.
 	It is my biggest project so far, even after being a software developer since 30 years now.&lt;/br&gt;
-	I am not good in anything in particular, but my skills are cross plattform, user interface design and user centered design
+	I am not good in anything in particular, but my skills are cross plattform, user interface 
+	design and user centered design
 	that is what is needed right now. &lt;/br&gt;&lt;/br&gt;
-	Maybe later we need to crowdfund some budget, because we might need hardware or we might have to pay some developer,
+	Maybe later we need to crowdfund some budget, because we might need hardware or we might 
+	have to pay some developer,
 	but right now we just need time.
 &lt;/p&gt;"
                 }
@@ -447,8 +520,8 @@ Would you like to see a solution, then keep reading on.
 				&lt;img class=&quot;img-responsive&quot; src=&quot;assets/images/olaf.png&quot; width=&quot;263&quot; height=&quot;263&quot; alt=&quot;&quot;/&gt;
 			&lt;/figure&gt;
 			&lt;div class=&quot;item-box-desc&quot;&gt;
-				&lt;h4&gt;Olaf Art Ananda&lt;/h4&gt;
-				&lt;small class=&quot;styleColor&quot;&gt;Monchique +351 969 31 28 08&lt;/small&gt;
+				&lt;h4&gt;Adam Art Ananda&lt;/h4&gt;
+				&lt;small class=&quot;styleColor&quot;&gt;Amoreira +351 969 31 28 08&lt;/small&gt;
 				&lt;p&gt;&lt;a href=&quot;mailto:artanidos@gmail.com&quot;&gt;Art&lt;/a&gt; currently lives in Potugal.&lt;/p&gt;
 				&lt;div class=&quot;row socials&quot;&gt;
 					&lt;a href=&quot;https://www.facebook.com/artanidos&quot; class=&quot;social fa fa-facebook&quot;&gt;&lt;/a&gt;
@@ -468,7 +541,7 @@ Would you like to see a solution, then keep reading on.
 
                 Text {
                     text: "&lt;div class=&quot;white-row&quot;&gt;
-	&lt;h3&gt;About &lt;strong&gt;Art&lt;/strong&gt; (Technical Teamleader)&lt;/h3&gt;
+	&lt;h3&gt;About &lt;strong&gt;Art&lt;/strong&gt; (Teamleader)&lt;/h3&gt;
 	&lt;p&gt;&lt;strong&gt;Art&lt;/strong&gt; was a software developer and designer for a long time until he attended his 
 	first tantric massage workshop in 2014.
 	Since that day he has completely turned his life upside down. He quit his well-paid job in Switzerland and
