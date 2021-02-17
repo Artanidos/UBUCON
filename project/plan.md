@@ -30,3 +30,4 @@ In phase II we will start to develop the app with the following features.
 
 ## Phase III
 Plugins will be supported.
+- Traffic Light for houses

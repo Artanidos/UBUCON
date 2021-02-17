@@ -1,7 +1,3 @@
-src/__pycache__/
-src/ssb/__pycache__/
-src/local/shs/__pycache__/
-src/rpc/shs/__pycache__/
-src/ssb/shs/__pycache__/
-src/mobile/build-project/
+src/build-android/
+src/build-desktop/
 .DS_Store
