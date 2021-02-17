@@ -64,6 +64,89 @@
          stdDeviation="0.00093692884"
          id="feGaussianBlur851-3" />
     </filter>
+    <style
+       id="style1767-248">.cls-1{fill:#e42b2b;fill-rule:evenodd;}</style>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter849-39"
+       x="-0.00012086612"
+       width="1.0002418"
+       y="-0.00011914621"
+       height="1.0002383">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.00093692884"
+         id="feGaussianBlur851-0" />
+    </filter>
+    <style
+       id="style1767-4-5">.cls-1{fill:#e42b2b;fill-rule:evenodd;}</style>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter849-8-2"
+       x="-0.00012086612"
+       width="1.0002417"
+       y="-0.00011914621"
+       height="1.0002383">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.00093692884"
+         id="feGaussianBlur851-3-2" />
+    </filter>
+    <style
+       id="style1767-24">.cls-1{fill:#e42b2b;fill-rule:evenodd;}</style>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter849-83"
+       x="-0.00012086612"
+       width="1.0002417"
+       y="-0.00011914621"
+       height="1.0002383">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.00093692884"
+         id="feGaussianBlur851-9-7" />
+    </filter>
+    <style
+       id="style1767-0">.cls-1{fill:#e42b2b;fill-rule:evenodd;}</style>
+    <style
+       id="style1767-2">.cls-1{fill:#e42b2b;fill-rule:evenodd;}</style>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter849-2"
+       x="-0.00012086612"
+       width="1.0002417"
+       y="-0.00011914621"
+       height="1.0002383">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.00093692884"
+         id="feGaussianBlur851-4" />
+    </filter>
+    <style
+       id="style1767-4-0">.cls-1{fill:#e42b2b;fill-rule:evenodd;}</style>
+    <style
+       id="style1767-8">.cls-1{fill:#e42b2b;fill-rule:evenodd;}</style>
+    <style
+       id="style1767-23">.cls-1{fill:#e42b2b;fill-rule:evenodd;}</style>
+    <style
+       id="style1767-8-9">.cls-1{fill:#e42b2b;fill-rule:evenodd;}</style>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter849-9"
+       x="-0.00012086612"
+       width="1.0002417"
+       y="-0.00011914621"
+       height="1.0002383">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.00093692884"
+         id="feGaussianBlur851-7" />
+    </filter>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -73,8 +156,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="3.5698081"
-     inkscape:cx="80.204116"
-     inkscape:cy="57.008585"
+     inkscape:cx="83.005387"
+     inkscape:cy="83.060406"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
@@ -121,11 +204,48 @@
        id="path915-2"
        d=""
        transform="matrix(2.0120154,0,0,2.0120154,41.967374,14.587526)" />
+    <path
+       style="fill:#000000;stroke-width:0.264583;filter:url(#filter849-39)"
+       id="path915-02"
+       d=""
+       transform="matrix(1.4931716,0,0,1.4931716,20.734493,7.3268822)" />
+    <path
+       style="fill:#000000;stroke-width:0.264583;filter:url(#filter849-8-2)"
+       id="path915-2-3"
+       d=""
+       transform="matrix(2.0012722,0,0,2.0012722,41.939489,14.253748)" />
+    <path
+       style="fill:#000000;stroke-width:0.264583;filter:url(#filter849-83)"
+       id="path915-7"
+       d=""
+       transform="matrix(2.0077362,0,0,2.0077362,41.803441,14.748854)" />
+    <path
+       style="opacity:0.96;fill:#000000;stroke-width:0.264583;filter:url(#filter849-83)"
+       id="path915-0"
+       d=""
+       transform="matrix(2.0077362,0,0,2.0077362,41.803441,14.748854)" />
+    <path
+       style="opacity:0.96;fill:#000000;stroke-width:0.264583;filter:url(#filter849-2)"
+       id="path915-9"
+       d=""
+       transform="matrix(1.3330755,0,0,1.3330755,7.1705818,7.2606342)" />
+    <circle
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.645083;filter:url(#filter849-83)"
+       id="path867"
+       cx="-32.004902"
+       cy="-5.1469359"
+       r="9.2746449"
+       transform="matrix(2.0077362,0,0,2.0077362,41.803441,14.748854)" />
+    <path
+       style="opacity:0.96;fill:#000000;stroke-width:0.264583;filter:url(#filter849-9)"
+       id="path915-5"
+       d=""
+       transform="matrix(0.94544808,0,0,0.94544808,-5.5036525,8.7856285)" />
     <g
        inkscape:label="Image"
        id="g278"
-       transform="matrix(0.1064161,0,0,0.1064161,-7.9276422,-3.2800939)"
-       style="filter:url(#filter849-8)">
+       transform="matrix(0.09053583,0,0,0.09053583,-10.207118,-2.2202135)"
+       style="opacity:0.96;filter:url(#filter849-9)">
       <path
          style="fill:#000000;stroke-width:1.06667"
          d=""
@@ -289,5 +409,10 @@
          x="-123.99816"
          y="-157.81583" />
     </g>
+    <path
+       style="opacity:0.96;fill:#000000;stroke-width:0.264583;filter:url(#filter849-83)"
+       id="path915-8"
+       d=""
+       transform="matrix(2.0077362,0,0,2.0077362,41.803441,14.748854)" />
   </g>
 </svg>

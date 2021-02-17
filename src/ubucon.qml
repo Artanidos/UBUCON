@@ -169,7 +169,7 @@ ApplicationWindow
                 anchors.top: parent.top
                 anchors.horizontalCenter: parent.horizontalCenter
                 fillMode: Image.PreserveAspectFit
-                source: "qrc:/images/logo.png"
+                source: "images/logo.png"
 
                 MouseArea
                 {

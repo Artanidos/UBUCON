@@ -44,9 +44,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="5.048471"
-     inkscape:cx="36.429986"
-     inkscape:cy="35.294922"
+     inkscape:zoom="11.684959"
+     inkscape:cx="18.223339"
+     inkscape:cy="17.72814"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
@@ -79,6 +79,12 @@
      id="layer1"
      style="display:inline;opacity:1"
      transform="translate(41.502036,14.632894)">
+    <circle
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.316;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path867"
+       cx="-36.871826"
+       cy="-10.002686"
+       r="4.5401297" />
     <path
        style="fill:#000000;stroke-width:0.264583;filter:url(#filter849)"
        id="path915-5"
@@ -87,7 +93,7 @@
     <g
        inkscape:label="Image"
        id="g278"
-       transform="matrix(0.02490618,0,0,0.02490618,-33.419841,-11.67551)"
+       transform="matrix(0.02207419,0,0,0.02207419,-33.885836,-11.620504)"
        style="filter:url(#filter849)">
       <path
          style="fill:#000000;stroke-width:1.06667"

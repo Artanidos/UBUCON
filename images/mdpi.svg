@@ -36,6 +36,27 @@
          stdDeviation="0.00093692884"
          id="feGaussianBlur851" />
     </filter>
+    <style
+       id="style1767-4">.cls-1{fill:#e42b2b;fill-rule:evenodd;}</style>
+    <style
+       id="style1767-8">.cls-1{fill:#e42b2b;fill-rule:evenodd;}</style>
+    <style
+       id="style1767-23">.cls-1{fill:#e42b2b;fill-rule:evenodd;}</style>
+    <style
+       id="style1767-8-9">.cls-1{fill:#e42b2b;fill-rule:evenodd;}</style>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter849-9"
+       x="-0.00012086612"
+       width="1.0002417"
+       y="-0.00011914621"
+       height="1.0002383">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.00093692884"
+         id="feGaussianBlur851-7" />
+    </filter>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -44,9 +65,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="5.048471"
-     inkscape:cx="39.500223"
-     inkscape:cy="40.048837"
+     inkscape:zoom="9.5647575"
+     inkscape:cx="20.501106"
+     inkscape:cy="21.206763"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
@@ -77,7 +98,7 @@
      inkscape:label="Ebene 1"
      inkscape:groupmode="layer"
      id="layer1"
-     style="opacity:0.96"
+     style="opacity:1"
      transform="translate(41.502036,14.632894)">
     <path
        style="fill:#000000;stroke-width:0.264583"
@@ -88,11 +109,22 @@
        id="path915-9"
        d=""
        transform="matrix(0.66396945,0,0,0.66396945,-14.034176,-5.0221567)" />
+    <circle
+       style="fill:#ffffff;fill-opacity:0.9946667;stroke:none;stroke-width:0.419081;fill-rule:nonzero"
+       id="path867"
+       cx="-35.23563"
+       cy="-8.4309368"
+       r="6.0253115" />
+    <path
+       style="fill:#000000;stroke-width:0.264583;filter:url(#filter849-9)"
+       id="path915-5"
+       d=""
+       transform="matrix(0.47090254,0,0,0.47090254,-20.346875,-4.2625976)" />
     <g
        inkscape:label="Image"
        id="g278"
-       transform="matrix(0.03511754,0,0,0.03511754,-30.49964,-10.91851)"
-       style="filter:url(#filter849)">
+       transform="matrix(0.02929517,0,0,0.02929517,-31.272853,-10.577982)"
+       style="filter:url(#filter849-9)">
       <path
          style="fill:#000000;stroke-width:1.06667"
          d=""
@@ -256,5 +288,9 @@
          x="-123.99816"
          y="-157.81583" />
     </g>
+    <path
+       style="fill:#000000;stroke-width:0.264583"
+       id="path915-8"
+       d="" />
   </g>
 </svg>
