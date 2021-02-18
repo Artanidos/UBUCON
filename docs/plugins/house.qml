@@ -29,14 +29,9 @@ Page
 	id: page
 	title: "HOUSE"
 
-	Text
+	Map 
 	{
-		id: text
-		text: "Hallo"
-	}
-	Button
-	{
-		text: "Click Me"
-		onClicked: text.text = "You have clicked the button."
+        anchors.fill: parent
+		zoomLevel: 14
 	}
 }
