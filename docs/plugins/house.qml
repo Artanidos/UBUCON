@@ -29,4 +29,8 @@ Page
 	id: page
 	title: "HOUSE"
 
+	Button
+	{
+		text: "Click Me"
+	}
 }
