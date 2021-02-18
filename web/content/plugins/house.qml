@@ -22,8 +22,6 @@ import QtQuick 2.12
 import QtQuick.Layouts 1.12
 import QtQuick.Controls 2.12
 import QtQuick.Controls.Material 2.12
-import QtLocation 5.6
-import QtPositioning 5.6
 import at.crowdware.backend 1.0
 
 Page 
@@ -31,17 +29,4 @@ Page
 	id: page
 	title: "HOUSE"
 
-	Plugin 
-	{
-        id: mapPlugin
-        preferred: ["here", "osm"]
-    	required: Plugin.AnyMappingFeatures | Plugin.AnyGeocodingFeatures	
-	}
-
-	Map 
-	{
-        anchors.fill: parent
-		plugin: mapPlugin
-		zoomLevel: 14
-	}
 }

@@ -40,18 +40,14 @@ class BackEnd : public QObject
     Q_PROPERTY(QString version READ getVersion CONSTANT)
     Q_PROPERTY(QString message READ getMessage CONSTANT)
     Q_PROPERTY(bool writepermission READ getWritepermission CONSTANT)
-    Q_PROPERTY(QString result READ getResult NOTIFY resultChanged)
     
 public:
     explicit BackEnd(QObject *parent = nullptr);
-
-    Q_INVOKABLE void HttpGet(QString url);
 
     QString lastError();
     void setLastError(const QString &lastError);
     QString getVersion();
     QString getMessage();
-    QString getResult();
     bool getWritepermission();
     bool checkPermission();
     void loadMenu();
@@ -59,14 +55,9 @@ public:
     void loadMessage();
     MenuModel *getMenuModel();
 
-
 signals:
     void lastErrorChanged();
     void messageChanged();
-    void resultChanged();
-
-public slots:
-    void onGetReply(QNetworkReply* reply);
 
 private:
     QString m_lastError;
@@ -74,7 +65,6 @@ private:
     QString m_check;
     int m_mates;
     bool m_writepermission;
-    QString m_result;
     QString m_message;
 };
 #endif // BACKEND_H
