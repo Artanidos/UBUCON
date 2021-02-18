@@ -31,9 +31,16 @@ Page
 	id: page
 	title: "HOUSE"
 
+	Plugin 
+	{
+        id: mapPlugin
+        name: "osm" 	
+	}
+
 	Map 
 	{
         anchors.fill: parent
+		plugin: mapPlugin
 		zoomLevel: 14
 	}
 }
