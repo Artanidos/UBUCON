@@ -29,8 +29,14 @@ Page
 	id: page
 	title: "HOUSE"
 
+	Text
+	{
+		id: text
+		text: "Hallo"
+	}
 	Button
 	{
 		text: "Click Me"
+		onClicked: text.text = "You have clicked the button."
 	}
 }
