@@ -24,24 +24,62 @@ import QtQuick.Controls 2.12
 import QtQuick.Controls.Material 2.12
 import QtLocation 5.6
 import QtPositioning 5.6
-import at.crowdware.backend 1.0
 
 Page 
 {
 	id: page
 	title: "HOUSE"
 
-	Plugin 
-	{
-        id: mapPlugin
-        preferred: ["here", "osm"]
-    	required: Plugin.AnyMappingFeatures | Plugin.AnyGeocodingFeatures	
-	}
+    PositionSource 
+    {
+        id: src
+        active: true
+    }
 
-	Map 
-	{
+    Plugin 
+    {
+        id: mapPlugin
+        preferred: ["osm", "here"]
+    }
+
+    Map 
+    {
         anchors.fill: parent
-		plugin: mapPlugin
-		zoomLevel: 14
-	}
+        plugin: mapPlugin
+        center: src.position.coordinate
+        zoomLevel: 14
+    }
+
+    Button
+    {
+        text: "Tag Location"
+        anchors.top: text.bottom
+        onClicked: request('http://artanidosatubuconat.pythonanywhere.com/register', function (o) 
+        {
+            text.text = o.responseText;
+        });
+    }
+
+    function request(url, callback) 
+    {
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = (function(myxhr) 
+        {
+            return function() 
+            {
+                callback(myxhr);
+            }
+        })(xhr);
+        xhr.open('POST', url, true);
+        xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+        xhr.send(JSON.stringify(
+        { 
+            "uuid": "1234", 
+            "name" : "Test", 
+            "tags" : "#house", 
+            "description" : "bla bla", 
+            "coordinates" : "POINT(2 3)", 
+            "test": "false"
+        }));
+    }
 }
