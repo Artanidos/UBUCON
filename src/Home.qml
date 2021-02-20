@@ -29,4 +29,15 @@ Page
 	id: page
 	title: "HOME"
 
+	Text
+	{
+		id: text
+		anchors.top: parent.top
+    	anchors.right: parent.right
+    	anchors.left: parent.left
+    	anchors.margins: page.width / 10
+		width: parent.width
+		font.pointSize: 20
+		text: "Willkommen bei UBUCON"
+	}
 }

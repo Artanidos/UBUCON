@@ -30,9 +30,11 @@
 #include <QUuid>
 #include "backend.h"
 #include "plugin.h"
+#include "markermodel.h"
 
 BackEnd backend;
-    
+MarkerModel model;
+
 void myMessageOutput(QtMsgType type, const QMessageLogContext &context, const QString &msg)
 {
     QByteArray localMsg = msg.toLocal8Bit();
@@ -77,11 +79,13 @@ int main(int argc, char *argv[])
     
     if (backend.checkPermission())
     {
+        backend.loadChain();
         backend.loadMenu();
         backend.loadPlugins();
     }
 
     QQmlApplicationEngine engine;
+    engine.rootContext()->setContextProperty("markerModel", &model);
     engine.rootContext()->setContextProperty("backend", &backend);
     engine.load(QUrl("qrc:/ubucon.qml"));
     if (engine.rootObjects().isEmpty())

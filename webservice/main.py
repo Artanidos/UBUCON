@@ -66,3 +66,25 @@ def register():
             conn.close()
 
     return jsonify(isError=False, message="Success", statusCode=200)
+
+@app.route('/location_list', methods=['POST'])
+def location_list():
+    content = request.json
+    coordinates = content['coordinates']
+    tags = content['tags']
+    locations = []
+    try:
+        conn = dbConnect()
+        curs = conn.cursor(dictionary=True)
+        query = 'SELECT uuid, name, tags, description, ST_X(coordinates) as latitude, ST_Y(coordinates) as longitude FROM location WHERE ST_Distance_Sphere(coordinates, GeomFromText("' + coordinates + '")) < 100000'
+        curs.execute(query)
+        for row in curs:
+            locations.append({'uuid' : row['uuid'], 'name' : row['name'], 'tags' : row['tags'], 'description' : row['description'], 'latitude' : row['latitude'], 'longitude' : row['longitude']})
+    except IntegrityError as error:
+        return jsonify(isError=True, message=error.msg, statusCode=200)
+    finally:
+        conn.close()
+
+    return jsonify(isError=False,
+        message="Success",
+        statusCode=200, data=locations)

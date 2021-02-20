@@ -32,6 +32,16 @@
 #include "menumodel.h" 
 
 
+#define BAD_FILE_FORMAT -1
+#define UNSUPPORTED_VERSION -2
+#define FILE_COULD_NOT_OPEN -3
+#define CRYPTO_ERROR -4
+#define CHAIN_NOT_LOADED_BEFORE_SAVE -5
+#define FILE_NOT_EXISTS -6
+#define CHAIN_LOADED 0
+#define CHAIN_SAVED 0
+
+
 class BackEnd : public QObject
 {
     Q_OBJECT
@@ -54,6 +64,8 @@ public:
     void loadPlugins();
     void loadMessage();
     MenuModel *getMenuModel();
+    int loadChain();
+    int saveChain();
 
 signals:
     void lastErrorChanged();
@@ -66,5 +78,6 @@ private:
     int m_mates;
     bool m_writepermission;
     QString m_message;
+    QString m_uuid;
 };
 #endif // BACKEND_H

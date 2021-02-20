@@ -45,7 +45,7 @@ BackEnd::BackEnd(QObject *parent) :
     QObject(parent)
 {   
     m_lastError = "";
-    m_message = "Welcome, wait a few seconds to load the database";
+    m_message = "Willkommen, berühre bitte das Symbol um weiter zu machen.";
 }
 
 MenuModel *BackEnd::getMenuModel()
@@ -61,7 +61,7 @@ bool BackEnd::getWritepermission()
 bool BackEnd::checkPermission()
 {
     m_writepermission = false;
-    QString msg_text = "Welcome, please set the permission to write to external storage in the settings of your mobile phone and restart the app.<br><br>You will find it under: Settings -> Apps -> Apps -> UBUCON -> Permission -> Memory";
+    QString msg_text = "Willkommen, bitte öffne die Systemeinstellungen und schalte der Speicherzugriff für UBUCON frei.<br><br>Du findest diese Einstellungen unter: Einstellungen -> Apps -> Apps -> UBUCON -> Berechtigungen -> Speicher";
             
     QString path = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + "/crowdware/ubucon/plugins";
     QDir dir(path);
@@ -142,4 +142,73 @@ void BackEnd::loadPlugins()
             }
         }
     }
+}
+
+int BackEnd::saveChain()
+{
+    QString path = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + "/crowdware";
+    QDir dir(path);
+    if (!dir.exists())
+        dir.mkpath(path);
+
+    path.append("/ubucon.db");
+    QFile file(path);
+    if(!file.open(QIODevice::WriteOnly))
+    {
+        if (file.error() != QFile::NoError) 
+        {
+            setLastError(file.errorString() + ":" + path);
+            return FILE_COULD_NOT_OPEN;
+        }
+    }
+    QDataStream out(&file);
+    out << (quint16)0x3113; // magic number
+    out << (quint16)100;    // version
+    out << m_uuid;
+    
+    file.close();
+    return CHAIN_SAVED;
+}
+
+int BackEnd::loadChain()
+{
+    quint16 magic;
+    quint16 version;
+    int count;
+
+    QString path = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + "/crowdware";
+    QFile file(path.append("/ubucon.db"));
+    if(!file.exists())
+    {
+        // create a new account on the first time 
+        m_uuid = QUuid::createUuid().toByteArray().toBase64();
+        saveChain();
+    }
+    if(!file.open(QIODevice::ReadOnly))
+    {
+        if (file.error() != QFile::NoError) 
+        {
+            setLastError(file.errorString());
+            return FILE_COULD_NOT_OPEN;
+        }
+    }
+    QDataStream in(&file);
+    in >> magic;
+    if (magic != 0x3113)
+    {
+        file.close();
+        return BAD_FILE_FORMAT;
+    }
+    // check the version
+    in >> version;
+    if (version < 100)
+    {
+        file.close();
+        return UNSUPPORTED_VERSION;
+    }
+    in >> m_uuid;
+    m_message = "Willkommen zurück";
+    emit messageChanged();
+    file.close();
+    return CHAIN_LOADED;
 }

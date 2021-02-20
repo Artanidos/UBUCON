@@ -1,6 +1,6 @@
 TEMPLATE = app
 TARGET = ubucon
-QT += quick quickcontrols2 core 
+QT += quick quickcontrols2 core location positioning
 CONFIG += c++11
 
 SOURCES += \
@@ -14,7 +14,8 @@ HEADERS += \
     backend.h \
     menu.h \
     plugin.h \
-    menumodel.h
+    menumodel.h \
+    markermodel.h
 
 RESOURCES += \
     ubucon.qml \

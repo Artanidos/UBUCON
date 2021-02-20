@@ -23,6 +23,8 @@ import QtQuick.Layouts 1.12
 import QtQuick.Controls 2.12
 import QtQuick.Controls.Material 2.12
 import at.crowdware.backend 1.0
+import QtLocation 5.6
+import QtPositioning 5.6
 
 ApplicationWindow 
 {
@@ -105,12 +107,12 @@ ApplicationWindow
 
                     MenuItem 
                     {
-                        text: "About"
+                        text: "Über"
                         onTriggered: aboutDialog.open()
                     }
                     MenuItem 
                     {
-                        text: "Last Error"
+                        text: "Letzter Fehler"
                         onTriggered: errorDialog.open()
                         visible: backend.lastError != ""
                         height: visible ? implicitHeight : 0
@@ -195,6 +197,7 @@ ApplicationWindow
                 horizontalAlignment: Label.AlignHCenter
                 verticalAlignment: Label.AlignVCenter
                 wrapMode: Label.Wrap
+                font.pointSize: 20
                 onLinkActivated: Qt.openUrlExternally(link)
             }
         }
@@ -205,7 +208,7 @@ ApplicationWindow
         id: aboutDialog
         modal: true
         focus: true
-        title: "About UBUCON " + backend.version
+        title: "Über UBUCON " + backend.version
         x: (window.width - width) / 2
         y: window.height / 6
         width: Math.min(window.width, window.height) / 3 * 2
@@ -219,7 +222,7 @@ ApplicationWindow
             Label 
             {
                 width: aboutDialog.availableWidth
-                text: "UBUCON CONNECTS US ALL"
+                text: "UBUCON VERBINDET UNS"
                 wrapMode: Label.Wrap
                 font.pixelSize: 15
             }
@@ -227,7 +230,7 @@ ApplicationWindow
             Label 
             {
                 width: aboutDialog.availableWidth
-                text: "TODO"
+                text: "UBUCON ist kostenlos, werbefrei und ohne Zensur. Du kannst UBUCON nutzen, um dich mit deinen Freunden zu verbinden und um neue Freunde und Gleichgesinnte kennen zu lernen."
                 wrapMode: Label.Wrap
                 font.pixelSize: 15
             }
