@@ -129,7 +129,7 @@ Page
 
     function loadLocations()
     {
-        text.text = "Loading...";
+        //text.text = "Loading...";
         var xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function()
         {
@@ -143,7 +143,7 @@ Page
                         markerModel.addMarker(jsonObject.data[i].latitude, jsonObject.data[i].longitude);
                     } 
                 }
-                text.text = "Ready";
+                //text.text = "Ready";
             }
         }
         xhr.open('POST', 'http://artanidosatubuconat.pythonanywhere.com/location_list', true);
@@ -151,8 +151,10 @@ Page
         xhr.send(JSON.stringify(
         { 
             "tags" : "#house", 
-            "coordinates" : "POINT(2 3)"
+            "latitude" : src.position.coordinate.latitude,
+            "longitude" : src.position.coordinate.longitude
         }));
+        text.text = "POINT(" + src.position.coordinate.latitude + " " + src.position.coordinate.longitude + ")";
     }
 
     Component.onCompleted : 

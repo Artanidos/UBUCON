@@ -70,13 +70,14 @@ def register():
 @app.route('/location_list', methods=['POST'])
 def location_list():
     content = request.json
-    coordinates = content['coordinates']
+    latitude = content['latitude']
+    longitude = content['longitude']
     tags = content['tags']
     locations = []
     try:
         conn = dbConnect()
         curs = conn.cursor(dictionary=True)
-        query = 'SELECT uuid, name, tags, description, ST_X(coordinates) as latitude, ST_Y(coordinates) as longitude FROM location WHERE ST_Distance_Sphere(coordinates, GeomFromText("' + coordinates + '")) < 100000'
+        query = 'SELECT uuid, name, tags, description, ST_X(coordinates) as latitude, ST_Y(coordinates) as longitude FROM location WHERE ST_Distance_Sphere(coordinates, GeomFromText("POINT(' + str(latitude) + ' ' + str(longitude) + ')")) < 100000'
         curs.execute(query)
         for row in curs:
             locations.append({'uuid' : row['uuid'], 'name' : row['name'], 'tags' : row['tags'], 'description' : row['description'], 'latitude' : row['latitude'], 'longitude' : row['longitude']})
