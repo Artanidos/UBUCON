@@ -112,24 +112,25 @@ Page
         var xhr = new XMLHttpRequest();
         xhr.onreadystatechange = (function(myxhr) 
         {
-            text.text = myxhr;
+            text.text = myxhr.responseText;
         })(xhr);
         xhr.open('POST', 'http://artanidosatubuconat.pythonanywhere.com/register', true);
         xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
         xhr.send(JSON.stringify(
         { 
-            "uuid": "1234", 
+            "uuid": backend.CreateUuid(), 
             "name" : "Test", 
             "tags" : "#house", 
             "description" : "bla bla", 
-            "coordinates" : "POINT(2 3)", 
+            "latitude" : src.position.coordinate.latitude, 
+            "longitude" : src.position.coordinate.longitude,
             "test": "false"
         }));
     }
 
     function loadLocations()
     {
-        //text.text = "Loading...";
+        text.text = "Loading...";
         var xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function()
         {
@@ -143,7 +144,7 @@ Page
                         markerModel.addMarker(jsonObject.data[i].latitude, jsonObject.data[i].longitude);
                     } 
                 }
-                //text.text = "Ready";
+                text.text = "Ready";
             }
         }
         xhr.open('POST', 'http://artanidosatubuconat.pythonanywhere.com/location_list', true);
@@ -154,7 +155,6 @@ Page
             "latitude" : src.position.coordinate.latitude,
             "longitude" : src.position.coordinate.longitude
         }));
-        text.text = "POINT(" + src.position.coordinate.latitude + " " + src.position.coordinate.longitude + ")";
     }
 
     Component.onCompleted : 

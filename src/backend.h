@@ -54,6 +54,8 @@ class BackEnd : public QObject
 public:
     explicit BackEnd(QObject *parent = nullptr);
 
+    Q_INVOKABLE QString CreateUuid();
+
     QString lastError();
     void setLastError(const QString &lastError);
     QString getVersion();

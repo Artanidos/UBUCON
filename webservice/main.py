@@ -50,14 +50,15 @@ def register():
     name = content['name']
     tags = content['tags']
     description = content['description']
-    coordinates = content['coordinates']
+    latitude = content['latitude']
+    longitude = content['longitude']
     test = content["test"] # used only for unit testing
 
     if test != "true":
         try:
             conn = dbConnect()
             curs = conn.cursor()
-            query = 'INSERT INTO location(uuid, name, tags, description, coordinates) VALUES("' + uuid + '", "' + name + '", "' + tags + '","' + description + '", GeomFromText("' + coordinates +'"))'
+            query = 'INSERT INTO location(uuid, name, tags, description, coordinates) VALUES("' + uuid + '", "' + name + '", "' + tags + '","' + description + '", GeomFromText("POINT(' + str(latitude) + ' ' + str(longitude) + ')"))'
             curs.execute(query)
             conn.commit()
         except IntegrityError as error:

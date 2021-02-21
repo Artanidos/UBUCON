@@ -48,6 +48,11 @@ BackEnd::BackEnd(QObject *parent) :
     m_message = "Willkommen, berühre bitte das Symbol um weiter zu machen.";
 }
 
+QString BackEnd::CreateUuid()
+{
+    return QUuid::createUuid().toByteArray().toBase64();
+}
+
 MenuModel *BackEnd::getMenuModel()
 {
     return &m_menuModel;
