@@ -51,7 +51,6 @@ Page
     Map 
     {
         id: mapview
-        //anchors.fill: parent
         anchors.top: text.bottom
         anchors.left: parent.left
         anchors.right: parent.right
@@ -80,7 +79,7 @@ Page
             sourceItem: Image 
             {
                 id: image
-                source: "http://maps.gstatic.com/mapfiles/ridefinder-images/mm_20_red.png"
+                source: "file:///storage.emulated/0/crowdware/ubucon/plugins/house/ampel_green.png"
             }
         }
     }
@@ -142,7 +141,7 @@ Page
                     var jsonObject = JSON.parse(xhr.responseText)
                     for (var i = 0; i < jsonObject.data.length; i++) 
                     {
-                        markerModel.addMarker(jsonObject.data[i].latitude, jsonObject.data[i].longitude);
+                        markerModel.addMarker(jsonObject.data[i].latitude, jsonObject.data[i].longitude, jsonObject.data[i].status);
                     } 
                 }
                 text.text = "Ready";

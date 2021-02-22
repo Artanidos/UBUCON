@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="15"
+   height="35"
+   viewBox="0 0 3.9687499 9.2604169"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0.1 (c497b03c, 2020-09-10)"
+   sodipodi:docname="ampel.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="13.144849"
+     inkscape:cx="9.0065846"
+     inkscape:cy="17.343258"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     units="px"
+     inkscape:window-width="1248"
+     inkscape:window-height="707"
+     inkscape:window-x="0"
+     inkscape:window-y="23"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#333333;fill-opacity:1;stroke-width:0.316"
+       id="rect858"
+       width="4.0256577"
+       height="9.2791414"
+       x="0"
+       y="0"
+       ry="0.86551648" />
+    <circle
+       style="fill:#ff0000;fill-opacity:1;stroke-width:0.599942"
+       id="path835"
+       cx="1.984375"
+       cy="1.7612253"
+       r="1.318403" />
+    <circle
+       style="fill:#ffff00;fill-opacity:1;stroke-width:0.599943"
+       id="path835-2"
+       cx="1.984375"
+       cy="4.6295066"
+       r="1.318403" />
+    <circle
+       style="fill:#008000;fill-opacity:1;stroke-width:0.599943"
+       id="path835-7"
+       cx="1.984375"
+       cy="7.6143246"
+       r="1.318403" />
+  </g>
+</svg>
