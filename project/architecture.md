@@ -27,3 +27,16 @@ The desktop app will have an advanced post editor, while on Android it will have
 # Android services
 Qt on Android: How to create an Android service using Qt
 https://www.kdab.com/qt-android-create-android-service-using-qt/
+
+
+
+# IPFS / StorJ
+Another possibility would be to use IPFS as the datasource for a social media platform.
+A user downloads the app and creates a local account (uuid).
+The user edits the profile and pushes it onto the IPFS stack as a file <uuid>.profile
+A second user is doing the same.
+Now they exchange their userids and user A can now read the profile from user B because he knows the uuid.
+A new file will be created that holds all friends. <uuid>.friends
+This file can also be readed by user B.
+Now user A creates a post and stores it under the name <uuid>.post.<datetime>
+User B can now see all posts from used A searched IPFS for <uuid>.post ordered by <datetime>.

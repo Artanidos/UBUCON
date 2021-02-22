@@ -119,11 +119,12 @@ Page
         xhr.send(JSON.stringify(
         { 
             "uuid": backend.CreateUuid(), 
-            "name" : "Test", 
+            "name" : "Todo", 
             "tags" : "#house", 
-            "description" : "bla bla", 
+            "description" : "Todo", 
             "latitude" : src.position.coordinate.latitude, 
             "longitude" : src.position.coordinate.longitude,
+            "status" : 0,
             "test": "false"
         }));
     }

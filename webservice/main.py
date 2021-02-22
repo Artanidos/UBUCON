@@ -52,13 +52,14 @@ def register():
     description = content['description']
     latitude = content['latitude']
     longitude = content['longitude']
+    status = content['status']
     test = content["test"] # used only for unit testing
 
     if test != "true":
         try:
             conn = dbConnect()
             curs = conn.cursor()
-            query = 'INSERT INTO location(uuid, name, tags, description, coordinates) VALUES("' + uuid + '", "' + name + '", "' + tags + '","' + description + '", GeomFromText("POINT(' + str(latitude) + ' ' + str(longitude) + ')"))'
+            query = 'INSERT INTO location(uuid, name, tags, description, coordinates, status) VALUES("' + uuid + '", "' + name + '", "' + tags + '","' + description + '", GeomFromText("POINT(' + str(latitude) + ' ' + str(longitude) + ')"), ' + str(status) + ')'
             curs.execute(query)
             conn.commit()
         except IntegrityError as error:
@@ -78,10 +79,10 @@ def location_list():
     try:
         conn = dbConnect()
         curs = conn.cursor(dictionary=True)
-        query = 'SELECT uuid, name, tags, description, ST_X(coordinates) as latitude, ST_Y(coordinates) as longitude FROM location WHERE ST_Distance_Sphere(coordinates, GeomFromText("POINT(' + str(latitude) + ' ' + str(longitude) + ')")) < 100000'
+        query = 'SELECT uuid, name, tags, description, ST_X(coordinates) as latitude, ST_Y(coordinates) as longitude, status FROM location WHERE ST_Distance_Sphere(coordinates, GeomFromText("POINT(' + str(latitude) + ' ' + str(longitude) + ')")) < 100000'
         curs.execute(query)
         for row in curs:
-            locations.append({'uuid' : row['uuid'], 'name' : row['name'], 'tags' : row['tags'], 'description' : row['description'], 'latitude' : row['latitude'], 'longitude' : row['longitude']})
+            locations.append({'uuid' : row['uuid'], 'name' : row['name'], 'tags' : row['tags'], 'description' : row['description'], 'latitude' : row['latitude'], 'longitude' : row['longitude'], 'status' : row['status']})
     except IntegrityError as error:
         return jsonify(isError=True, message=error.msg, statusCode=200)
     finally:
