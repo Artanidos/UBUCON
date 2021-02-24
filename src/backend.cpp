@@ -22,6 +22,7 @@
 #include <QGuiApplication>
 #include <QDateTime>
 #include <QFile>
+#include <QQmlContext>
 #include <QCryptographicHash>
 #include <QStandardPaths>
 #include <QDataStream>
@@ -53,6 +54,11 @@ QString BackEnd::CreateUuid()
     return QUuid::createUuid().toByteArray().toBase64();
 }
 
+QString BackEnd::GetPluginDir()
+{
+    return m_pluginDir;
+}
+
 MenuModel *BackEnd::getMenuModel()
 {
     return &m_menuModel;
@@ -69,6 +75,7 @@ bool BackEnd::checkPermission()
     QString msg_text = "Willkommen, bitte öffne die Systemeinstellungen und schalte der Speicherzugriff für UBUCON frei.<br><br>Du findest diese Einstellungen unter: Einstellungen -> Apps -> Apps -> UBUCON -> Berechtigungen -> Speicher";
             
     QString path = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + "/crowdware/ubucon/plugins";
+    m_pluginDir = "file://" + path;
     QDir dir(path);
     if (!dir.exists())
     {
@@ -78,8 +85,7 @@ bool BackEnd::checkPermission()
             return false;
         }
     }
-    path.append("/test.txt");
-    QFile file(path);
+    QFile file(path + "/test.txt");
     if(file.open(QIODevice::WriteOnly))
     {
         file.close();
@@ -135,6 +141,7 @@ void BackEnd::loadPlugins()
         {
             QFileInfo fileInfo = list.at(i);
             QQmlEngine engine;
+            engine.rootContext()->setContextProperty("backend", this);
             QQmlComponent component(&engine);
             QString fileName = path + "/ubucon/plugins/" + fileInfo.fileName() + "/plugin.qml";
             QFile file(fileName);
@@ -179,7 +186,6 @@ int BackEnd::loadChain()
 {
     quint16 magic;
     quint16 version;
-    int count;
 
     QString path = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + "/crowdware";
     QFile file(path.append("/ubucon.db"));

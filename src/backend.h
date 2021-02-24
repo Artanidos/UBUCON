@@ -55,6 +55,7 @@ public:
     explicit BackEnd(QObject *parent = nullptr);
 
     Q_INVOKABLE QString CreateUuid();
+    Q_INVOKABLE QString GetPluginDir();
 
     QString lastError();
     void setLastError(const QString &lastError);
@@ -81,5 +82,6 @@ private:
     bool m_writepermission;
     QString m_message;
     QString m_uuid;
+    QString m_pluginDir;
 };
 #endif // BACKEND_H
